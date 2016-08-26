@@ -1,0 +1,96 @@
+
+
+.executive-team {
+
+  .ghLine {
+    height: 1px;
+    background-color: $light-grey;
+    width: 80%;
+    display: block;
+    margin: auto;
+    margin-top: 37px;
+  }//.ghLine
+
+  .banner {
+    background-image: url('/images/exec-top-bg.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: auto;
+    height: auto;
+
+    h1 {
+      font-family: Montserrat, sans-serif;
+      color: white;
+      font-size: 62px;
+      font-weight: 700;
+      text-shadow: 0 2px 3px rgba(0, 0, 0, 0.7);
+      padding-top: 189px;
+      padding-bottom: 166px;
+      text-align: center;
+      line-height: normal;
+    }//h1
+  }//.banner
+
+  .execs {
+    margin-top: 60px;
+
+    & > div {
+      text-align: center;
+    }//& > div
+
+    .exec {
+      margin-top: 37px;
+
+      img {
+        width: 120px;
+        height: 120px;
+        vertical-align: top;
+      }//img
+
+      .info {
+        display: inline-block;
+        margin-left: 60px;
+        max-width: 700px;
+        text-align: left;
+
+        h3 {
+          color: $darkGrey;
+          font-family: Montserrat, sans-serif;
+          font-size: 23px;
+          font-weight: 700;
+          display: block;
+          margin-top: 0;
+
+          span {
+            font-size: 20px;
+            font-weight: 300;
+          }//span
+        }//h3
+
+        p {
+          color: black;
+          font-family: Helvetica;
+          font-size: 14px;
+          font-weight: 300;
+        }//p
+      }//.info
+    }//.exec
+  }//.execs
+
+  @include media('<=900px') {
+
+    .execs {
+
+      .exec {
+
+        .info {
+          margin: auto;
+          margin-top: 32px;
+          display: block;
+          width: 80%;
+        }//.info
+      }//.exec
+    }//.execs
+  }//breakpoint mobile
+}//.executive-team

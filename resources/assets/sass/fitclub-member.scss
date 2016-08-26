@@ -1,0 +1,267 @@
+#fitclub-member-profile {
+  .myprofile-text {
+    padding: 30px 0;
+
+    @include media(">=tablet") {
+      padding: 50px 0;
+    }
+
+
+    @include media(">=desktop") {
+      padding: 70px 0;
+    }
+
+
+    h1 {
+      text-transform: uppercase;
+      font-size: 28px;
+      margin: 0;
+      font-weight: bold;
+
+      @include media(">=tablet") {
+        font-size: 36px;
+      }
+
+
+      @include media(">=desktop") {
+        font-size: 42px;
+      }
+    }
+  }
+
+  .image-upload-wrapper {
+    a {
+      cursor: pointer;
+    }
+  }
+
+  .personal-info {
+    background: #E6E6E6;
+    padding: 20px 0;
+
+    @include media(">=tablet") {
+      padding: 50px 0;
+    }
+
+
+    #updateImageForm, #uploadImageForm {
+      display: none;
+    }
+
+    .initials {
+      background: darkgray;
+      border-radius: 50%;
+      display: inline-block;
+      vertical-align: middle;
+      position: relative;
+      width: 100px;
+      height: 100px;
+
+      @include media(">=tablet") {
+        width: 140px;
+        height: 140px;
+      }
+
+
+      ul {
+        position: absolute;
+        margin: 0;
+        top: 30px;
+        left: 28px;
+
+        @include media(">=tablet") {
+          top: 40px;
+          left: 36px;
+        }
+
+
+        li {
+          font-size: 28px;
+          padding: 0;
+          margin: 0;
+
+          @include media(">=tablet") {
+            font-size: 42px;
+          }
+        }
+      }
+    }
+
+    img {
+      // max-width: 120px;
+      max-height: 150px;
+
+      @include media(">=tablet") {
+        margin-top: 20px;
+
+        // max-width: 200px;
+        max-height: 200px;
+      }
+    }
+
+    ul {
+      margin: 0;
+      margin-top: 40px;
+
+      li {
+        color: #747474;
+        font-size: 18px;
+        margin-left: 20px;
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        .fa {
+          margin-right: 8px;
+        }
+
+        a {
+          font-size: 15px;
+          color: #cc0000;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+#recently-completed-videos {
+  padding: 30px 0;
+
+  @include media(">=tablet") {
+    padding: 60px 0;
+  }
+
+
+  .line-center {
+    margin: 0;
+    padding: 0 20px;
+    background: #fff;
+    display: inline-block;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  h1 {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    font-weight: normal;
+    color: #282828;
+    margin-top: 10px;
+    margin-bottom: 50px;
+
+    @include media(">=desktop") {
+      font-size: 28px;
+    }
+  }
+
+  h1:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    border-top: solid 1px #AFAFAF;
+    z-index: -1;
+  }
+
+  .large-button {
+    background: transparent;
+    border: 1px solid #cc0000;
+    border-radius: 3px;
+    color: #cc0000;
+    font-family: Bebas;
+    padding: 10px 30px 5px 30px;
+    font-weight: 600;
+    font-size: 22px;
+    margin-top: 10px;
+
+    @include media(">=tablet") {
+      margin-top: 30px;
+      font-size: 28px;
+    }
+  }
+}
+
+#member-discount {
+  padding: 0 10px;
+  margin-top: 30px;
+
+  @include media(">=tablet") {
+    margin-top: 60px;
+  }
+
+
+  .coupon-holder {
+    text-align: center;
+    border: 2px dashed #cc0000;
+    padding: 20px;
+
+    @include media(">=tablet") {
+      padding: 30px;
+    }
+
+
+    &:before {
+      font-family: icomoon;
+      content: "\e927";
+      position: absolute;
+      font-size: 26px;
+      display: block;
+      color: #cc0000;
+      background: white;
+      top: -19px;
+      left: 47%;
+
+      @include media(">=tablet") {
+        font-size: 30px;
+        top: -23px;
+      }
+    }
+
+    .coupon {
+      h3 {
+        margin: 0;
+        margin-bottom: 10px;
+        font-size: 18px;
+        color: #cc0000;
+        text-transform: uppercase;
+
+        @include media(">=tablet") {
+          font-size: 22px;
+        }
+      }
+
+      p {
+        margin-bottom: 0;
+        font-size: 13px;
+        color: #484848;
+
+        @include media(">=tablet") {
+          font-size: 16px;
+        }
+      }
+
+      .large-button {
+        margin-top: 30px;
+        background: #cc0000;
+        border-radius: 3px;
+        color: white;
+        font-family: Bebas;
+        padding: 10px 30px 5px 30px;
+        font-weight: 600;
+        font-size: 22px;
+        margin-top: 10px;
+
+        @include media(">=tablet") {
+          margin-top: 30px;
+          font-size: 28px;
+        }
+      }
+    }
+  }
+}

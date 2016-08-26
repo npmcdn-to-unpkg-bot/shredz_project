@@ -1,0 +1,144 @@
+@import "mixins";
+@import "variables";
+@import "fonticons";
+
+// @import 'bootstrap';
+@import "global-class";
+@import "header";
+@import "fitclub-header";
+@import "fitclub-member";
+@import "athlete-detail";
+@import "athlete-list";
+@import "brand-ambassadors";
+@import "cart";
+@import "common";
+@import "company-profile";
+@import "createAccount";
+@import "footer";
+@import "help";
+@import "home";
+@import "home-old";
+@import "icomoon";
+@import "modals";
+@import "paypal-success";
+@import "products";
+@import "return-policy";
+@import "settings-account";
+@import "settings-general";
+@import "settings-orders";
+@import "settings-subscriptions";
+@import "settings";
+@import "store";
+@import "subscriptions";
+@import "thankyou";
+@import "vip-area";
+@import "vip-preview";
+@import "vip-signup";
+@import "ceo-message";
+@import "reviews";
+@import "blog";
+@import "article";
+@import "landing/landing";
+@import "newproduct";
+@import "fitclub/fitclub";
+@import "coaching";
+@import "results";
+@import "meal-plan";
+@import "login"; 
+@import "invitation";
+
+@import "pages/font-face";
+@import "pages/wholesale";
+
+input,
+select,
+button {
+  cursor: initial; 
+}
+
+.slick-slide {
+  outline: none;
+}
+
+.transformations {
+  .slick-slider {
+    margin-bottom: 0;
+  }
+
+  p.transformation-disclaimer {
+    text-align: center;
+    color: #9e9e9e;
+    margin: 10px 0;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 10px;
+    padding: 0 10px;
+    font-family: helvetica;
+    display: block;
+    clear: both;
+  }
+}
+
+
+
+.container-extra {
+  max-width: 1340px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.no-gutter {
+  padding: 0;
+}
+
+.load-hidden {
+  display: none;
+}
+
+.main-content > .home .dotd-block {
+  background-image: url("https://s3.amazonaws.com/SHREDZ-SITE/SHREDZ.COM/images/home/home-bg.jpg");
+  background-size: 100%;
+  padding-bottom: 20px;
+}
+
+#full_as_seen_on {
+  background: #fff;
+}
+
+.white-block {
+  background: #fff;
+  margin-top: 20px;
+}
+
+.affixed {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+}
+
+.button-cta {
+  color: #fff;
+  background: #cc0000;
+  padding: 14px;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+
+  &.wv {
+    background: #ff009c;
+  }
+}
+
+.terms_conditions{ 
+  .title{
+    h1,
+    h2,
+    h3{
+      font-size: 27px;
+      text-transform: uppercase;
+      margin: 20px 0 15px;
+    }
+  }
+}

@@ -1,0 +1,336 @@
+.vip-signup {
+  .lightGreyBackground {
+    background-color: #ebebeb;
+  }
+
+  //.lightGreyBackground
+
+  .wrapper {
+    padding: 0 20px;
+    max-width: 880px;
+    margin: auto;
+  }
+
+  //.wrapper
+
+  p {
+    &.name {
+      font-size: 20px;
+      font-family: Montserrat, sans-serif;
+      font-weight: 600;
+      color: $darkGrey;
+      text-align: center;
+      margin: 21px 0;
+    }
+
+    //&.label
+ 
+  }
+
+  //p
+
+  .carousel-holder {
+    // margin-top: -8px;
+    width: 100%;
+    height: 400px;
+    background-image: url("/images/_JSJ9970_ED.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  //.carousel-holder
+
+  .clips {
+    overflow: auto;
+    padding: 1px 0;
+
+    //temporary
+ 
+  }
+
+  //.clips
+
+  .clip {
+    width: 25%;
+    height: 150px;
+    float: left;
+    outline: 1px solid;
+  }
+
+  //.clip
+
+  .preview-videos {
+    margin-top: 24px;
+
+    img {
+      width: 100%;
+      height: 350px;
+    }
+
+    //img
+ 
+  }
+
+  //.preview-videos
+
+  .tips {
+    .ebooks {
+      margin-top: 40px;
+    }
+
+    //.ebooks
+
+    img {
+      width: 286px;
+      height: 143px;
+      display: block;
+      margin: auto;
+    }
+
+    //img
+ 
+  }
+
+  //.tips
+
+  .sub-options {
+    padding-bottom: 60px;
+    text-align: center;
+    width: 100%;
+
+    .cont {
+      background-color: white;
+      padding-bottom: 40px;
+      margin-top: 40px;
+    }
+
+    //.cont
+
+    h2 {
+      margin-top: 49px;
+      font-size: 36px;
+      font-weight: 700;
+    }
+
+    //h2
+
+    p {
+      margin: 0;
+      font-size: 23px;
+      color: $darkGrey;
+      font-family: Montserrat, sans-serif;
+      font-weight: 700;
+      position: relative;
+      bottom: 16px;
+    }
+
+    //p
+
+    .deal {
+      position: static;
+      font-family: Montserrat, sans-serif;
+      color: $shRed;
+      font-weight: 300;
+      font-size: 71px;
+
+      span {
+        font-size: 26px;
+      }
+
+      //span
+   
+    }
+
+    //.deal
+
+    button {
+      background-color: $shRed;
+
+      @include appearance(none);
+
+      @include border-radius(3px);
+
+      border: none;
+      color: white;
+      font-family: Montserrat, sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      padding: 16px 30px;
+    }
+
+    //button
+ 
+  }
+
+  //.sub-options
+
+  .my-workout {
+    overflow: auto;
+    margin-top: 32px;
+    background-color: #ebebeb;
+
+    .left {
+      float: left;
+      width: 50%;
+      height: 400px;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    //.left
+
+    .right {
+      float: right;
+      width: 50%;
+      text-align: center;
+      padding-top: 28px;
+
+      p {
+        max-width: 420px;
+        text-align: center;
+        margin: auto;
+        margin-top: 38px;
+        line-height: 28px;
+      }
+
+      //p
+
+      h2 {
+        font-weight: 700;
+      }
+
+      //h2
+
+      button {
+        @include appearance(none);
+
+        @include border-radius(3px);
+
+        border: none;
+        color: white;
+        background-color: $female;
+        font-size: 20px;
+        font-weight: 700;
+        font-family: Montserrat, sans-serif;
+        padding: 15px 40px;
+        margin-top: 42px;
+      }
+
+      //button
+   
+    }
+
+    //.right
+
+    ._quote {
+      h2 {
+        display: inline-block;
+        width: 330px;
+        margin: 0;
+        font-size: 25px;
+      }
+
+      //h2
+
+      img {
+        width: 50px;
+        height: 50px;
+        vertical-align: top;
+      }
+
+      //img
+   
+    }
+
+    //._quote
+
+    @include media("<=1000px") {
+      .left, .right {
+        width: 100%;
+      }
+
+      //.left, .right
+
+      .right {
+        padding-bottom: 40px;
+      }
+
+      //.right
+    }
+
+
+    //breakpoint mobile
+
+    @include media("<=500px") {
+      ._quote {
+        img {
+          display: none;
+        }
+
+        //img
+     
+      }
+
+      //._quote
+
+      .right {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      //.right
+    }
+
+
+    //breakpoint small
+ 
+  }
+
+  //.my-workout
+
+  @include media(">=768px") {
+    .preview-videos {
+      img {
+        height: 250px;
+      }
+
+      //img
+   
+    }
+
+    //.preview-videos
+
+    .sub-options {
+      .cont {
+        //margin-top: 0;
+     
+      }
+
+      //.cont
+   
+    }
+
+    //.sub-options
+  }
+
+
+  //breakpoint md
+
+  @include media(">=992px") {
+    .preview-videos {
+      img {
+        height: 159px;
+      }
+
+      //img
+   
+    }
+
+    //.preview-videos
+  }
+
+
+  //breakpoint lg
+}
+
+//.vip-signup

@@ -1,0 +1,145 @@
+@import "mixins";
+@import "variables";
+
+#article-container {
+  .date-class {
+    color: $lightGrey;
+
+    @include media(">=tablet") {
+      margin-top: -20px !important;
+      margin-bottom: 0px;
+    }
+
+
+    @include media(">=desktop") {
+      font-size: 14px !important;
+    }
+
+
+    // @include padding(0px 0px 10px 0px);
+ 
+  }
+
+  .author-margin-mobile {
+    margin-top: 10px;
+
+    @include media(">=tablet") {
+      margin-top: 0px;
+    }
+  }
+
+  .white-color-background {
+    background: $white;
+  }
+
+  .fixed-sidenav-width {
+    width: 16.66%;
+    top: 93px;
+    position: fixed;
+  }
+
+  .absolute-sidenav-width {
+    position: absolute;
+    width: 100%;
+  }
+
+  #left-container {
+    padding-right: 0;
+
+    @include media("<=mobile") {
+      padding-left: 0;
+    }
+  }
+
+  #middle-container {
+    .padding-bottom-mobile {
+      padding-bottom: 20%;
+
+      @include media(">=mobile") {
+        padding-bottom: 25%;
+      }
+
+
+      @include media(">=tablet") {
+        padding-bottom: 0;
+      }
+    }
+
+    // .sticky-social-button {
+    //   position: fixed;
+    //   top: 75px;
+    //   background: white;
+    //   z-index: 5;
+    //   width: 100%;
+    // }
+
+    .related-articles {
+      @include media(">=tablet") {
+        padding-bottom: 30px;
+      }
+
+
+      .col {
+        padding-right: 0;
+        padding-left: 0;
+
+        & + .col {
+          padding-top: 10px;
+        }
+
+        @include media(">=tablet") {
+          & + .col {
+            padding-top: 0px;
+          }
+
+          padding-left: 15px;
+          padding-top: 0;
+          padding-right: 0;
+        }
+      }
+
+      h2 {
+        padding-bottom: 20px;
+
+        @include media(">=tablet") {
+          padding-bottom: 30px;
+        }
+      }
+
+      .overlay-styling {
+        img {
+          position: relative;
+          width: 100%;
+          margin: 0;
+        }
+      }
+
+      p {
+        padding: 10px;
+        color: white;
+        position: absolute;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 2;
+        margin-bottom: 0;
+        right: 0;
+        left: 0;
+
+        @include media(">=tablet") {
+          right: 0;
+          left: 15px;
+        }
+      }
+    }
+  }
+}
+
+.iconmoon {
+  &:before {
+    margin-right: 5px;
+  }
+}
+
+.fa-venus {
+  font-size: 25px;
+}

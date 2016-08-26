@@ -1,0 +1,38 @@
+/* FONT PATH
+ * -------------------------- */
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('BebasNeue.eot?v=2016-02-03');
+  src: url('BebasNeue.eot?#iefix&v=2016-02-03') format('embedded-opentype'),
+    url('BebasNeue.woff2?v=2016-02-03') format('woff2'),
+    url('BebasNeue.woff?v=2016-02-03') format('woff'),
+    url('BebasNeue.ttf?v=2016-02-03') format('truetype'),
+    url('BebasNeue.svg?v=2016-02-03#bebasneueregular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('BebasNeueRegular.eot?v=2016-02-03');
+  src: url('BebasNeueRegular.eot?#iefix&v=2016-02-03') format('embedded-opentype'),
+    url('BebasNeueRegular.woff2?v=2016-02-03') format('woff2'),
+    url('BebasNeueRegular.woff?v=2016-02-03') format('woff'),
+    url('BebasNeueRegular.ttf?v=2016-02-03') format('truetype'),
+    url('BebasNeueRegular.svg?v=2016-02-03#bebasneueregular') format('svg');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('BebasNeueBold.eot?v=2016-02-03');
+  src: url('BebasNeueBold.eot?#iefix&v=2016-02-03') format('embedded-opentype'),
+    url('BebasNeueBold.woff2?v=2016-02-03') format('woff2'),
+    url('BebasNeueBold.woff?v=2016-02-03') format('woff'),
+    url('BebasNeueBold.ttf?v=2016-02-03') format('truetype'),
+    url('BebasNeueBold.svg?v=2016-02-03#bebasneueregular') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}

@@ -1,0 +1,493 @@
+
+
+.athlete-detail{
+  .favorites{
+    margin-bottom: 60px;
+    border-bottom: 1px solid #e9e9e9;
+    padding-bottom: 40px;
+  }
+}
+
+.product-image.img-responsive{
+  max-width: 300px;
+  display: block;
+  margin: 0 auto;
+}
+
+.videoPlaceholder iframe{
+  width: 100% !important;
+  height: $bp-mobile !important;
+}
+
+.section-margin{
+  margin-top: 30px;
+}
+.inside-section-margin{
+  margin-top: 20px;
+}
+a{
+  &:hover{
+    text-decoration: none;
+  }
+}
+.button-style{
+  background-color: $shredz-primary;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  border: none;
+  color: white;
+  font-family: Montserrat, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 16px 30px;
+  margin-top: 50px;
+}
+/*athlete-detail.scss*/
+.athlete-detail {
+  padding-bottom: 32px;
+  .group {
+    position: relative;
+  }//.group
+
+  .videoPlaceholder {
+    margin-top: 1px;
+  }//.videoPlaceholder
+
+  .wrapper {
+    padding: 20px 20px;
+    max-width: 1300px;
+    margin: auto;
+    clear: both;
+    overflow: auto;
+
+    &.no-overflow {
+      overflow: visible;
+    }//&.no-overflow
+  }//.wrapper
+
+  h1, h2, h3, p {
+    margin: 0;
+  }//h1, h2, h3, p
+
+  .profile-photo {
+    background-color: $darkGrey;
+    padding: 30% 0 10%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    h1 {
+      color: white;
+      font-family: Montserrat, sans-serif;
+      font-size: 39px;
+      font-weight: 700;
+      text-align: center;
+      text-shadow: 0 0 6px $black;
+
+      text-align: center;
+      width: 100%;
+      text-transform: uppercase;
+      font-size: 13vw;
+      opacity: .3;
+
+    }//h1
+  }//.profile-photo
+
+  h2 {
+    text-align: center;
+    margin-top: 33px;
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 36px;
+  }//h2
+
+  p {
+    font-size: 16px;
+    font-weight: 300;
+    color: $darkGrey;
+    margin-top: 32px;
+  }//p
+
+  .bio {
+    padding-bottom: 63px;
+
+    h2 {
+      margin-top: 33px;
+      text-align: center;
+    }//h2
+  }//.bio
+
+  .photos {
+    margin-top: 48px;
+    padding-bottom: 20px;
+    text-align: center;
+
+    img {
+      margin: auto;
+      margin-bottom: 5px;
+    }//img
+  }//.photos
+
+  .quote-background {
+    // background-color: #ededed;
+    padding-bottom: 36px;
+    position: relative;
+  }//.quote-background
+  .icon-style{
+    font-size: 70px;
+    margin-top: 20px;
+  }
+  .quote-font-size{
+    font-family: lato;
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: 200;
+    text-align: center;
+  }
+  .quote {
+    font-family: lato;
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: 200;
+    text-align: center;
+    // background-color: #ededed;
+
+    ._mark {
+    font-size: 207px;
+    font-weight: 700;
+    display: block;
+    text-align: center;
+    position: absolute;
+    font-family: serif;
+    opacity: .8;
+    color: #ccc;
+      top: -30px;
+    &.starts{
+      left: 0;
+    }
+    &.ends{
+      right: 0;
+    }
+}//.mark
+  }//.quote
+
+  .closing {
+    font-family: Montserrat, sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    margin-top: 10px;
+  }//.closing
+
+  .social {
+
+    .videoPlaceholder {
+      height: 185px;
+      width: 335px;
+    }//.videoPlaceholder
+
+    h2 {
+      margin-top: 75px;
+    }//h2
+
+    p {
+      margin-top: 40px;
+    }//p
+
+    a.follow {
+      font-family: Helvetica;
+      font-size: 15px;
+      font-weight: 300;
+      text-align: center;
+      display: block;
+      margin-top: 55px;
+    }//a.follow
+
+    img.follow {
+      width: 335px;
+      height: 185px;
+      background-color: $grey;
+      display: block;
+      margin: auto;
+      margin-top: 44px;
+      background-image: url('/images/athletes/paige/follow.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }//img.follow
+  }//.social
+
+  .favorites {
+
+    h2 {
+      margin-top: 62px;
+      margin-bottom: 70px;
+    }//h2
+
+    .product {
+      margin-top: 70px;
+
+      img {
+        width: 250px;
+        display: block;
+        margin: auto;
+        margin-top: 32px;
+      }//img
+
+      p {
+        line-height: 22px;
+        font-size: 16px;
+        font-weight: 300;
+        font-family: Montserrat, sans-serif;
+        text-align: center;
+        color: #373737;
+      }//p
+
+      button {
+        @include appearance(none);
+        @include border-radius(3px);
+        border: none;
+        color: white;
+        font-family: Montserrat, sans-serif;
+        font-weight: 700;
+        font-size: 24px;
+        padding: 14px 50px;
+        display: block;
+        margin: auto;
+        margin-top: 27px;
+      }//button
+    }//.product
+
+    .bhline {
+      height: 1px;
+      width: 100%;
+      background-color: $light-grey;
+      margin-top: 38px;
+    }//.bhline
+  }//favorites
+
+  .more {
+
+    h2 {
+      margin-top: 75px;
+      margin-bottom: 10px;
+      color: $darkGrey;
+      text-decoration: underline;
+    }//h2
+
+    img {
+      width: 334px;
+      height: 267px;
+      display: block;
+      margin: auto;
+    }//img
+  }//.more
+
+  .desktop {
+    display: none;
+
+    img {
+      height: 100px;
+      width: 10%;
+      float: left;
+    }//img
+  }//.desktop
+
+  @include media('>=1000px') {
+
+    .profile-photo {
+      padding: 10% 0 5%;
+    }//.profile-photo
+
+    .bio {
+
+      h2 {
+        //text-align: left;
+        padding-left: 20px;
+
+        &.closing {
+          text-align: center;
+        }//&.closing
+      }//h2
+    }//.bio
+
+    .text-group {
+      width: 45%;
+
+      &.left {
+         float: left;
+      }//&.left
+
+      &.right {
+        float: right;
+      }//&.right
+    }//.text-group
+
+    .photos {
+      text-align: center;
+
+      img {
+        display: inline-block;
+        width: 267px;
+        height: auto;
+        margin-bottom: 5px;
+      }//img
+
+      &.wrapper {
+        padding: 0;
+        padding-bottom: 20px;
+      }//&.wrapper
+    }//.photos
+
+    .social {
+
+      a.follow {
+        clear: both;
+        font-size: 20px;
+      }//a.follow
+
+      img.follow {
+        width: 100%;
+        height: 550px;
+      }//img.follow
+
+      .desktop {
+        display: block;
+      }//.desktop
+
+      .videoPlaceholder {
+        width: 100%;
+        height: 400px;
+      }//.videoPlaceholder
+    }//.social
+
+    .favorites {
+
+      h2 {
+        font-size: 48px;
+      }//h2
+
+      .product {
+        overflow: auto;
+
+        img {
+          float: left;
+        }//img
+
+        .group {
+          float: right;
+          max-width: 600px;
+        }//.group
+
+        &.right {
+
+          img {
+            float: right;
+          }//img
+
+          .group {
+            float: left;
+          }//.group
+        }//&.right
+
+        p {
+          font-size: 24px;
+          line-height: 28px;
+        }//p
+      }//.product
+    }//.favorites
+
+    .more {
+
+      img {
+        width: 25%;
+        float: left;
+      }//img
+    }//.moire
+  }//breakpoint desktop
+}//.athlete-detail
+
+.insta-class{
+    text-transform: lowercase;
+    color: $shredz-primary;
+    &:visited{
+      color: $shredz-primary;
+      text-decoration: none;
+    }
+    &:hover{
+      color: $shredz-primary;
+    }
+  }
+  .country-class{
+    color: #666;
+    text-transform: uppercase;
+  }
+
+.all-athlete-container{
+  .margin-bottom{
+    margin-bottom: 30px;
+  }
+  h4{
+    color: black;
+    text-transform: uppercase;
+  }
+  h5{
+    margin-top: -5px;
+  }
+  .insta-class{
+    text-transform: lowercase;
+    color: $shredz-primary;
+  }
+  .country-class{
+    color: #666;
+    text-transform: uppercase;
+  }
+}
+
+@media screen and (max-width: 1068px){
+  .icon-style{
+    font-size: 50px !important;
+  }
+  .custom-margin{
+      margin: 0px -15px 0px 0px;
+  }
+  .quote-font-size {
+    font-size: 24px !important;
+  }
+
+}
+
+@media screen and (max-width: 767px){
+  .icon-style{
+    font-size: 30px !important;
+  }
+  .custom-margin{
+      margin: 0px -25px 0px 5px;
+  }
+  .quote-font-size {
+    font-size: 15px !important;
+  }
+  .athlete-detail{
+    p{
+      margin: 0;
+    }
+  }
+  .no-margin{
+    margin: 0 auto;
+  }
+
+  .all-athlete-container{
+    h4{
+      font-size: 14px;
+    }
+    h5{
+      font-size: 12px;
+    }
+    .margin-bottom{
+      margin-bottom: 20px;
+    }
+  }
+
+}

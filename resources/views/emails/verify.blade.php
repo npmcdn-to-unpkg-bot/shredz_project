@@ -1,0 +1,1 @@
+Click here to verify your email: {{ $fromDomain }}/email/verify/{{ $token }} 

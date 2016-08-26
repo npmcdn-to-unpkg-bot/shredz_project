@@ -1,0 +1,479 @@
+/* VARIABLES FOR REVIEW PAGE */
+$review-page-primary-color: #333333;
+$review-page-secondary-color: #727272;
+$extra-small-font-size: 12px;
+$small-font-size: 26px;
+$medium-font-size: 38px;
+$large-font-size: 60px;
+$extra-large-font-size: 72px;
+$primary-link-color: $shredz-primary;
+
+/*VARIABLES ENDS HERE */
+
+/* SPINNER */
+.no-border {
+  border: none !important;
+}
+
+.review-page-primary-color {
+  color: $review-page-primary-color;
+  background: $review-page-primary-color;
+}
+
+.review-page-secondary-color {
+  color: $review-page-secondary-color;
+}
+
+.extra-small-font {
+  font-size: $extra-small-font-size;
+}
+
+.small-font {
+  font-size: $small-font-size;
+}
+
+.medium-font {
+  font-size: $medium-font-size;
+}
+
+.large-font {
+  font-size: $large-font-size;
+  font-weight: bold;
+}
+
+.extra-large-font {
+  font-size: $extra-large-font-size;
+  font-weight: 900;
+}
+
+.carousel-control.right, .carousel-control.left {
+  background: none;
+}
+
+.section-margin {
+  margin-top: 50px;
+}
+
+.inside-section-margin {
+  margin-top: 40px;
+}
+
+.challenge-details-section-padding {
+  padding: 40px;
+}
+
+.full-content {
+  display: none;
+}
+
+.start-story-button {
+  font-size: 16px !important;
+  -webkit-font-smoothing: antialiased;
+
+  @include media(">=tablet") {
+    font-size: 20px;
+  }
+}
+
+.modal-start-story-button {
+  margin: 0 auto;
+  float: none;
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: -10px;
+
+  @include media(">=tablet") {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.heading {
+  h3 {
+    margin-top: 0;
+    font-size: 22px;
+    font-weight: bold;
+    padding-top: 10px;
+
+    @include media(">=tablet") {
+      font-size: 30px;
+    }
+
+
+    @include media(">=desktop") {
+      font-size: 40px;
+    }
+  }
+}
+
+.full-reviews {
+  h3 {
+    padding-right: 10px;
+    margin-top: 0;
+    padding-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+
+    @include media(">=tablet") {
+      font-size: 26px;
+      padding-top: 0;
+    }
+
+
+    @include media(">=desktop") {
+      font-size: 30px;
+    }
+  }
+
+  p {
+    display: inline;
+    margin-top: 10px;
+    line-height: 1.4;
+
+    @include media(">=tablet") {
+      font-size: 15px;
+      margin-top: 20px;
+      line-height: 1.5;
+    }
+
+
+    @include media(">=desktop") {
+      font-size: 17px;
+      margin-top: 20px;
+      line-height: 1.7;
+    }
+  }
+}
+
+.read-more-link {
+  font-family: Montserrat, sans-serif;
+  color: $primary-link-color !important;
+  text-decoration: underline;
+  line-height: 3em;
+
+  &:hover, &:active, &:visited {
+    color: $primary-link-color !important;
+  }
+}
+
+#exercise-info-holder {
+  padding-bottom: 20px;
+
+  @include media(">=tablet") {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.exercise-instruction {
+  color: #888888;
+  font-size: 9px;
+  text-transform: uppercase;
+  line-height: 15px;
+  font-weight: 100;
+  margin-top: -20px;
+
+  @include media(">=tablet") {
+    margin-top: 0;
+    font-size: 11px;
+    line-height: 19px;
+  }
+}
+
+.exercise-instruction-modal {
+  color: #888888;
+  text-align: center;
+  margin-bottom: -18px;
+  font-size: 9px;
+  margin-top: 20px;
+
+  @include media(">=tablet") {
+    margin-top: 10px;
+    font-size: 10px;
+    margin-bottom: -5px;
+  }
+}
+
+#success-stories {
+  p {
+    margin-top: 15px;
+
+    span {
+      color: $primary-link-color;
+      float: right;
+    }
+  }
+
+  .load-button-spacing {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+
+  #load-more-button {
+    &.load-more-button-styling {
+      padding: 20px 80px 20px 80px;
+      text-decoration: underline;
+      color: #969696;
+      background-color: transparent;
+      background-image: none;
+      border-color: #f2f2f2;
+      font-size: 17px;
+    }
+  }
+}
+
+/* SLICK ARROW STYLING */
+#review-page-slider {
+  .slick-arrow {
+    display: block !important;
+    top: 35%;
+
+    @include media(">=tablet") {
+      top: 50%;
+    }
+  }
+
+  .slick-prev:before, .slick-next:before {
+    font-size: 30px;
+    font-family: FontAwesome;
+    font-weight: bold !important;
+    color: #030303 !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    @include media(">=tablet") {
+      font-size: 40px;
+    }
+
+
+    @include media(">=desktop") {
+      font-size: 50px;
+    }
+
+
+    @include media(">=widescreen") {
+      font-size: 55px;
+    }
+  }
+
+  .slick-prev:before {
+    content: "\f053" !important;
+  }
+
+  .slick-next:before {
+    content: "\f054" !important;
+  }
+
+  .slick-prev {
+    font-size: 0px !important;
+    background: none !important;
+
+    @include media(">=tablet") {
+      left: -18px;
+    }
+
+
+    @include media(">=desktop") {
+      left: -25px;
+    }
+
+
+    @include media(">=widescreen") {
+      left: -45px;
+    }
+  }
+
+  .slick-next {
+    font-size: 0px !important;
+    background: none !important;
+
+    @include media(">=tablet") {
+      right: -25px;
+    }
+
+
+    @include media(">=widescreen") {
+      right: -45px;
+    }
+  }
+}
+
+.button-close {
+  font-size: 30px;
+}
+
+.modal-body {
+  padding: 30px 15px;
+}
+
+#hidden-text-for-modal {
+  display: none;
+}
+
+#review-page-modal {
+  .modal-dialog {
+    @include media(">=tablet") {
+      width: 700px;
+    }
+
+
+    @include media(">=desktop") {
+      width: 860px;
+    }
+  }
+
+  &.modal {
+    text-align: center;
+    z-index: 9999;
+  }
+
+  .modal-header {
+    padding: 15px;
+
+    .modal-title {}
+
+    h3 {
+      padding-left: 30px;
+      font-size: 20px;
+      font-weight: bold;
+
+      @include media(">=tablet") {
+        font-size: 26px;
+      }
+
+
+      padding-right: 35px;
+    }
+  }
+
+  .modal-body {
+    @include media("<=mobile") {
+      max-height: calc(100vh - 200px);
+      overflow-y: auto;
+    }
+
+
+    .subheading {
+      padding-right: 10px;
+      margin-top: 0;
+      padding-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+
+      @include media(">=tablet") {
+        padding-top: 0px;
+        font-size: 24px;
+      }
+    }
+
+    .description {
+      margin-top: 10px;
+      font-size: 13px;
+      line-height: 1.4;
+      padding-right: 10px;
+
+      @include media(">=tablet") {
+        font-size: 14px;
+        margin-top: 20px;
+        line-height: 1.7;
+        max-height: 400px;
+        overflow-y: scroll;
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    &.modal:before {
+      display: inline-block;
+      vertical-align: middle;
+      content: " ";
+      height: 100%;
+    }
+  }
+
+  .modal-header .close {
+    font-size: 3em;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+  }
+
+  .modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+  }
+
+  @media (max-width: 767px) {
+    &.modal.fade.in {
+      top: 10%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section-margin {
+    margin-top: 10px;
+  }
+
+  #review-page-slider {
+    p {
+      font-size: $extra-small-font-size;
+      line-height: 20px;
+    }
+
+    .inside-section-margin {
+      margin: 0;
+    }
+
+    .exercise-instruction {
+      font-size: 10px;
+      line-height: 12px;
+      margin-bottom: 30px;
+    }
+  }
+
+  #challenge-details {
+    .challenge-details-section-padding {
+      padding: 10px 0px 10px 0px;
+    }
+  }
+
+  #success-stories {
+    .col-xs-6 {
+      padding: 5px;
+    }
+
+    .load-button-spacing {
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+  }
+
+  .extra-large-font {
+    font-size: $medium-font-size;
+  }
+
+  .large-font {
+    font-size: $medium-font-size;
+  }
+
+  .medium-font {
+    font-size: $small-font-size;
+  }
+}
+
+@media screen and (max-width: 468px) {
+  #review-page-slider {
+    .button-cta {
+      font-size: 11px;
+    }
+  }
+
+  #success-stories {
+    .button-cta {
+      font-size: 11px;
+    }
+  }
+}

@@ -1,0 +1,2344 @@
+@import "master";
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+@mixin meal-plan($color) {
+  /////////////////////
+  /// GLOBAL
+  /////////////////////
+
+  h2.title-light {
+    font-weight: 300;
+    line-height: 1.2;
+    letter-spacing: .01em;
+
+    strong {
+      display: block;
+    }
+  }
+
+  @include media("<=tablet") {
+    .fixed-add-to-cart {
+      position: fixed;
+      top: 60px;
+      transition: all 0.3s;
+      width: 100%;
+      z-index: 434;
+      left: 0px;
+      background: white;
+      padding-top: 25px;
+      box-shadow: 0px 2px 5px #afafaf;
+
+      button.large-button {
+        line-height: 22px !important;
+        font-size: 22px !important;
+        padding: 5px 40px 0 !important;
+      }
+    }
+
+    .relative-add-to-cart {
+      position: static;
+      top: auto;
+      width: 100%;
+    }
+  }
+
+
+  .transparent-triangle:before {
+    right: 50%;
+    border-left: 0px solid;
+
+    // border-right: 155px solid transparent;
+ 
+  }
+
+  .transparent-triangle + section {
+    position: relative;
+  }
+
+  .transparent-triangle + section:before {
+    border-right: 0px solid;
+    content: '';
+    display: block;
+    background: url(https://s3.amazonaws.com/SHREDZ-SITE/SHREDZ.COM/images/mealplan/arrow-up.png);
+    position: absolute;
+    left: 0;
+
+    // bottom: -69px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    top: -54px;
+    width: 100%;
+    height: 100px;
+
+    @include media(">=phone") {}
+
+
+    @include media(">mobile") {}
+
+
+    @include media(">tablet") {
+      display: none;
+    }
+  }
+
+  .hide-info {
+    button.btn-xs {
+      margin-top: 30px;
+      background: transparent;
+      border: 2px solid $color;
+      color: $color;
+      border-radius: 2px;
+      font-family: Lato;
+      font-weight: 400;
+      text-transform: uppercase;
+      padding: 10px;
+      font-size: 12px;
+
+      @include media(">=tablet") {
+        font-size: 20px;
+        padding: 15px;
+      }
+    }
+  }
+
+  .add-to-cart {
+    text-align: center;
+
+    button {
+      border-radius: 3px;
+      cursor: pointer;
+      border: none;
+      font-size: 36px;
+      line-height: 36px;
+      padding: 10px 40px;
+      font-family: Bebas;
+      background-color: #31AA13;
+      color: white;
+      width: 100%;
+
+      @include media(">=tablet") {
+        width: 300px;
+      }
+
+
+      @include media(">=desktop") {
+        width: 400px;
+      }
+    }
+  }
+
+  /////////////////////
+  /// BANNER
+  /////////////////////
+
+  #banner {
+    padding: 0 10px;
+    border: none;
+
+    @include media(">=tablet") {
+      padding: 0;
+    }
+
+
+    .cover-image {
+      background-size: cover;
+      height: 330px;
+      background-position: center, center;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      @if $color == #ff0095 {
+        background-image: url(https://s3.amazonaws.com/SHREDZ-SITE/SHREDZ.COM/images/mealplan/top-banner-female.jpg);
+      }
+      @else {
+        background-image: url(https://s3.amazonaws.com/SHREDZ-SITE/SHREDZ.COM/images/mealplan/top-banner.jpg);
+      }
+
+      @include media(">=tablet") {
+        background-size: cover;
+        height: 450px;
+
+        @if $color == #ff0095 {
+          background-image: url(https://s3.amazonaws.com/SHREDZ-SITE/SHREDZ.COM/images/mealplan/meal-plan-desktop-female.jpg);
+        }
+        @else {
+          background-image: url(https://s3.amazonaws.com/SHREDZ-SITE/SHREDZ.COM/images/mealplan/meal-plan-desktop-male.jpg);
+        }
+      }
+    }
+  }
+
+  /////////////////////
+  /// MEAL PLAN INFO
+  /////////////////////
+
+  #meal-plan-info {
+    // margin-top: 30px;
+    margin-bottom: 30px;
+
+    @include media(">=tablet") {
+      margin-top: 60px;
+    }
+
+
+    //////////////////
+    //   RATINGS
+    //////////////////
+
+    .ratings {
+      @include media(">=tablet") {
+        margin-top: 20px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #484848;
+
+        span {
+          &.fa {
+            color: #F1DA1A;
+            margin-top: 10px;
+
+            &:before {
+              font-size: 18px;
+              -webkit-text-stroke: #EBBF11;
+              -webkit-text-stroke-width: 1px;
+            }
+          }
+        }
+      }
+    }
+
+    .name-price {
+      text-align: center;
+
+      @include media(">=tablet") {
+        text-align: left;
+      }
+
+
+      h1 {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 26px;
+
+        @include media(">=tablet") {
+          font-size: 28px;
+        }
+
+
+        @include media(">=desktop") {
+          font-size: 36px;
+        }
+      }
+
+      h3 {
+        color: #484848;
+        text-transform: capitalize;
+        margin-top: 5px;
+        font-weight: normal;
+
+        @include media(">=tablet") {
+          font-size: 18px;
+        }
+
+
+        &.price {
+          margin-top: 15px;
+          font-weight: 500;
+
+          span {
+            margin-top: 10px;
+            color: $color;
+            font-size: 21px;
+          }
+        }
+      }
+    }
+
+    .benefits {
+      margin-top: 30px;
+      text-align: left;
+
+      @include media(">=tablet") {
+        margin-top: 15px;
+      }
+
+
+      ul {
+        margin: 0;
+        margin-left: 5px;
+
+        li {
+          text-transform: uppercase;
+          font-size: 14px;
+          color: #484848;
+          margin-top: 5px;
+
+          @include media(">=tablet") {
+            margin-top: 10px;
+          }
+
+
+          .fa {
+            color: #8AC02C;
+          }
+        }
+      }
+    }
+
+    .info {
+      margin-top: 30px;
+
+      p {
+        text-align: center;
+        color: #747474;
+        font-family: Lato;
+        text-transform: none;
+
+        @include media(">=tablet") {
+          text-align: left;
+          font-size: 16px;
+        }
+      }
+
+      a {
+        display: block;
+        color: $color;
+        font-size: 14px;
+        text-align: center;
+
+        @include media(">=tablet") {
+          text-align: left;
+        }
+      }
+    }
+
+    .add-to-cart {
+      button {
+        @include media(">=tablet") {
+          margin: 0;
+        }
+      }
+
+      p {
+        @include media(">=desktop") {
+          margin-left: 45px;
+        }
+
+
+        img {
+          max-height: 13px;
+          margin-right: 5px;
+        }
+      }
+    }
+
+    p {
+      margin-top: 10px;
+      text-transform: uppercase;
+      text-align: center;
+      color: #747474;
+      font-size: 12px;
+
+      @include media(">=tablet") {
+        text-align: left;
+      }
+    }
+  }
+
+  #become-yourself, #customized, #gives-everything {
+    height: auto;
+    padding-bottom: 40px;
+    background-position: center, center;
+    background-repeat: repeat;
+    position: relative;
+
+    .heading {
+      h1 {
+        text-transform: uppercase;
+        font-size: 26px;
+        text-align: center;
+        color: $color;
+        font-weight: bold;
+
+        @include media(">=tablet") {
+          font-size: 36px;
+        }
+      }
+
+      ul {
+        margin: 0;
+        color: #484848;
+        text-align: center;
+        margin-top: 10px;
+
+        li {
+          text-transform: uppercase;
+          font-size: 12px;
+          font-weight: 400;
+
+          @include media(">=tablet") {
+            font-size: 14px;
+          }
+
+
+          @include media(">=desktop") {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    .video-text-wrapper {
+      p {
+        margin-top: 30px;
+        font-family: Lato;
+        color: #939393;
+        font-size: 16px;
+        text-align: center;
+      }
+    }
+
+    .let-us-show {
+      h3 {
+        text-align: center;
+        text-transform: uppercase;
+        color: $color;
+        margin-top: 30px;
+      }
+
+      .icon-wrapper {
+        text-align: center;
+        margin-top: 30px;
+
+        @include media(">=tablet") {
+          margin-top: 40px;
+        }
+
+
+        .icon {
+          font-size: 30px;
+          display: block;
+
+          @include media(">=tablet") {
+            font-size: 40px;
+          }
+
+
+          @include media(">=desktop") {
+            font-size: 60px;
+          }
+        }
+
+        p {
+          text-transform: uppercase;
+          font-size: 12px;
+          color: #484848;
+          font-family: Lato;
+          margin-top: 10px;
+          border-bottom: 2px solid $color;
+          padding-bottom: 10px;
+
+          @include media(">=tablet") {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  #real-stories {
+    @include media(">=tablet") {
+      margin-top: 60px;
+    }
+
+
+    .container {
+      @include media(">=1600px") {
+        width: 1400px;
+      }
+    }
+
+    .instruction {
+      color: $color;
+      font-size: 8px;
+      margin: 0;
+      background: #F2F2F2;
+      padding: 15px;
+      margin-left: -15px;
+      margin-right: -15px;
+      text-align: center;
+      font-family: Lato;
+
+      @include media(">=tablet") {
+        max-width: 100%;
+        font-size: 12px;
+        margin: 0;
+      }
+    }
+
+    .eric, .johnbellmore, .katyann, .geneva {
+      img {
+        max-height: 300px;
+        margin: 0 auto;
+
+        @include media(">=tablet") {
+          max-height: 400px;
+        }
+
+
+        @include media(">=desktop") {
+          max-height: 500px;
+        }
+
+
+        @include media(">=1600px") {
+          max-height: 600px;
+        }
+      }
+    }
+
+    .eric, .katyann {
+      img {
+        @include media(">=tablet") {
+          float: right;
+        }
+      }
+    }
+
+    .johnbellmore, .geneva {
+      margin-top: 30px;
+
+      img {
+        @include media(">=tablet") {
+          float: left;
+        }
+      }
+
+      @include media(">=tablet") {
+        margin-top: 0;
+      }
+    }
+
+    .katyann {
+      @include media(">=tablet") {
+        padding-top: 10px;
+      }
+
+
+      @include media(">=desktop") {
+        padding-top: 15px;
+      }
+
+
+      @include media(">=1600px") {
+        padding-top: 20px;
+      }
+    }
+
+    .add-to-cart {
+      margin: 30px 0;
+    }
+  }
+
+  #are-you-next {
+    background: #F2F2F2;
+    padding-bottom: 10px;
+
+    .second-image {
+      margin-top: 15px;
+
+      img {
+        @include media(">=tablet") {
+          max-height: 350px;
+          margin: 0 auto;
+          padding: 20px 0;
+        }
+      }
+    }
+  }
+
+  #custom-diet-plan, #custom-workout-plan, #dedicated-coach, #best-price, #bonus-gift {
+    border-bottom: 1px solid #CFCFCF;
+    padding-bottom: 20px;
+
+    @include media(">=tablet") {
+      margin-top: 0;
+    }
+
+
+    .heading {
+      h2 {
+        color: $color;
+        text-align: center;
+        text-transform: uppercase;
+        margin-top: 25px;
+      }
+
+      h3 {
+        margin-top: 0;
+        font-size: 18px;
+      }
+    }
+
+    h1 {
+      background: $color;
+      color: white;
+      text-align: center;
+      text-transform: uppercase;
+      padding: 15px 0;
+      position: relative;
+
+      &:before {
+        font-family: FontAwesome;
+        content: "\f0d7";
+        position: absolute;
+        display: block;
+        color: $color;
+        bottom: -26px;
+        font-size: 40px;
+        left: 47%;
+
+        @include media(">=tablet") {
+          left: 49%;
+        }
+      }
+    }
+
+    .heading {
+      h3 {
+        margin-top: 15px;
+        font-family: 'Handlee', cursive;
+        font-weight: 400;
+        text-align: center;
+        color: #747474;
+        letter-spacing: 0.1em;
+        font-weight: 200;
+      }
+    }
+
+    .image-container, .chat-wrapper {
+      margin-top: 30px;
+
+      .icon {
+        &.icon-arrow {
+          position: absolute;
+          font-size: 50px;
+          top: -50px;
+          left: 43%;
+          transform: rotate(-60deg);
+          color: #AFAFAF;
+        }
+      }
+
+      .icon-wrapper {
+        position: relative;
+      }
+    }
+
+    .logo-container {
+      margin-top: 30px;
+
+      @include media(">=tablet") {
+        margin-top: 0;
+      }
+
+
+      .icon-wrapper {
+        text-align: center;
+
+        .icons {
+          @include media(">=tablet") {
+            margin-top: 20px;
+
+            &:first-child {
+              margin-top: 10px;
+            }
+          }
+
+
+          @include media(">=desktop") {
+            margin-top: 50px;
+          }
+
+
+          ul {
+            @include media(">=tablet") {
+              text-align: left;
+              margin-left: 30px;
+            }
+
+
+            li {
+              img {
+                &.icon {
+                  max-height: 70px;
+                  max-height: 20vw;
+                  margin: 0 auto;
+
+                  @include media(">=tablet") {
+                    max-height: 80px;
+                  }
+
+
+                  @include media(">=desktop") {
+                    max-height: 90px;
+                  }
+                }
+              }
+
+              @include media(">=tablet") {
+                display: inline-block;
+
+                p, small {
+                  margin-left: 10px;
+                }
+              }
+            }
+          }
+
+          .icon {
+            font-size: 30px;
+
+            @include media(">=tablet") {
+              margin-right: 10px;
+              font-size: 60px;
+            }
+          }
+        }
+
+        p {
+          font-family: Lato;
+          font-size: 13px;
+          color: #464847;
+          margin: 0;
+          margin-top: 10px;
+          font-weight: bold;
+
+          @include media(">=tablet") {
+            font-size: 16px;
+          }
+
+
+          @include media(">=desktop") {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+
+    .content {
+      margin-top: 25px;
+
+      @include media(">=tablet") {
+        margin-bottom: 30px;
+        margin-top: 60px;
+      }
+
+
+      @include media(">=desktop") {
+        margin-top: 100px;
+      }
+
+
+      p {
+        text-align: center;
+        color: #484848;
+        font-family: Lato;
+      }
+    }
+
+    .view-more, .hide-info {
+      button.btn-xs {
+        margin-top: 30px;
+        background: transparent;
+        border: 2px solid $color;
+        color: $color;
+        border-radius: 2px;
+        font-family: Lato;
+        font-weight: 400;
+        text-transform: uppercase;
+        padding: 10px;
+        font-size: 12px;
+
+        @include media(">=tablet") {
+          font-size: 20px;
+          padding: 15px;
+        }
+      }
+
+      p {
+        text-align: center;
+        color: #484848;
+        font-family: Lato;
+      }
+    }
+  }
+
+  #favorite-foods, #favorite-workouts {
+    margin-top: 30px;
+    display: none;
+    padding-bottom: 30px;
+
+    @include media(">=tablet") {
+      padding-bottom: 40px;
+    }
+
+
+    @include media(">=desktop") {
+      padding-bottom: 60px;
+    }
+
+
+    .heading {
+      text-align: center;
+
+      @include media(">=tablet") {
+        margin: 20px 0;
+      }
+
+
+      @include media(">=desktop") {
+        margin: 30px 0;
+      }
+
+
+      h4 {
+        color: #747474;
+        font-weight: bold;
+        text-transform: uppercase;
+
+        @include media(">=tablet") {
+          font-size: 36px;
+        }
+      }
+
+      p {
+        color: #747474;
+        font-family: Lato;
+        font-size: 14px;
+        margin-top: 10px;
+      }
+    }
+
+    .food-option, .workout-option {
+      padding: 0;
+      max-height: 343px;
+      overflow-y: scroll;
+      border: 1px solid #ddd;
+
+      table {
+        margin-bottom: 0;
+
+        tbody {
+          tr {
+            &:nth-child(even) {
+              background: #EBEBEB;
+            }
+
+            &:nth-child(odd) {
+              background: #F3F3F3;
+            }
+
+            td {
+              color: #9D9D9D;
+              font-size: 16px;
+              font-family: Lato;
+              font-weight: 400;
+
+              span {
+                display: inline-block;
+                vertical-align: middle;
+              }
+
+              .icon {
+                display: inline-block;
+                vertical-align: middle;
+                font-size: 26px;
+                padding-left: 30px;
+                margin-right: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .image-wrapper {
+      h4 {
+        color: #747474;
+        font-weight: bold;
+        text-align: center;
+        margin: 20px 0;
+        text-transform: uppercase;
+        line-height: 1.3;
+      }
+
+      img {
+        @include media(">=tablet") {
+          max-height: 250px;
+          margin: 0 auto;
+        }
+
+
+        @include media(">=desktop") {
+          max-height: 300px;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+
+  #custom-diet-plan {
+    margin-top: 0;
+
+    @include media(">=tablet") {
+      padding-bottom: 40px;
+    }
+
+
+    @include media(">=desktop") {
+      padding-bottom: 60px;
+    }
+
+
+    .logo-container {
+      ul {
+        margin: 0;
+      }
+    }
+
+    h1 {
+      &.custom {
+        background: #484848;
+        font-size: 26px;
+        font-weight: bold;
+        letter-spacing: 0.03em;
+
+        &:before {
+          display: none;
+        }
+      }
+    }
+
+    .heading {
+      @include media(">=tablet") {
+        margin-bottom: 40px;
+      }
+
+
+      h3 {
+        margin-top: 0;
+      }
+    }
+
+    .image-container {
+      margin-top: 15px;
+
+      @include media(">=tablet") {
+        border-right: 1px solid #979797;
+      }
+
+
+      img {
+        margin: 0 auto;
+
+        @include media(">=tablet") {
+          padding-right: 40px;
+        }
+
+
+        @include media(">=desktop") {
+          padding-right: 50px;
+        }
+      }
+
+      .content {
+        p {
+          padding: 15px 0;
+        }
+      }
+    }
+
+    .view-more {
+      @include media(">=tablet") {
+        margin-top: 40px;
+      }
+
+
+      @include media(">=desktop") {
+        margin-top: 60px;
+      }
+    }
+  }
+
+  #custom-workout-plan {
+    @include media(">=tablet") {
+      padding-bottom: 40px;
+    }
+
+
+    @include media(">=desktop") {
+      padding-bottom: 60px;
+    }
+
+
+    .heading {
+      @include media(">=tablet") {
+        margin-bottom: 40px;
+      }
+
+
+      @include media(">=desktop") {
+        margin-bottom: 60px;
+      }
+    }
+
+    .image-container {
+      margin-top: 15px;
+
+      &:after {
+        display: none;
+      }
+
+      img {
+        @include media(">=tablet") {
+          max-height: 250px;
+        }
+      }
+
+      p {
+        margin-top: 15px;
+        margin-bottom: 0;
+      }
+    }
+
+    .image-wrapper {
+      margin-top: 15px;
+
+      p {
+        margin-top: 10px;
+        color: #747474;
+        font-family: Lato;
+        font-size: 14px;
+        margin-top: 10px;
+        text-align: center;
+      }
+
+      @include media(">=tablet") {
+        margin-top: 0px;
+        float: right;
+        padding-left: 50px;
+        border-left: 1px solid #979797;
+      }
+    }
+
+    .icon-wrapper {
+      margin-top: 20px;
+
+      @include media(">=tablet") {
+        margin-top: 0;
+        float: left;
+      }
+
+
+      .icons {
+        @include media("<tablet") {
+          padding: 5px;
+        }
+
+
+        @include media(">=tablet") {
+          margin-top: 15px;
+
+          &:first-child {
+            margin-top: 0;
+          }
+        }
+
+
+        @include media(">=desktop") {
+          margin-top: 30px;
+        }
+
+
+        ul {
+          margin: 0;
+
+          @include media(">=tablet") {
+            text-align: right !important;
+            margin-right: 20px;
+          }
+
+
+          li {
+            h4 {
+              margin-top: 10px;
+              text-transform: uppercase;
+              color: $color;
+              text-align: center;
+
+              @include media(">=tablet") {
+                margin-right: 10px;
+                font-size: 14px;
+              }
+
+
+              @include media(">=desktop") {
+                font-size: 18px;
+              }
+            }
+
+            img {
+              @include media(">=tablet") {
+                max-height: 60px;
+              }
+
+
+              @include media(">=desktop") {
+                max-height: 90px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .view-more {
+      @include media(">=tablet") {
+        margin-top: 40px;
+      }
+
+
+      @include media(">=desktop") {
+        margin-top: 60px;
+      }
+    }
+  }
+
+  #dedicated-coach {
+    @include media(">=tablet") {
+      padding-bottom: 40px;
+    }
+
+
+    @include media(">=desktop") {
+      padding-bottom: 60px;
+    }
+
+
+    .heading {
+      @include media(">=tablet") {
+        margin-bottom: 40px;
+      }
+    }
+
+    .logo-container {
+      margin-top: 15px;
+
+      @include media(">=tablet") {
+        padding-left: 30px;
+      }
+
+
+      .icon-wrapper {
+        .icons {
+          ul {
+            margin: 0;
+          }
+        }
+      }
+    }
+
+    .image-container {
+      @include media(">=tablet") {
+        border-right: 1px solid #979797;
+        padding-right: 50px;
+      }
+    }
+
+    .logo-container {
+      @include media(">=tablet") {
+        margin-top: 0;
+      }
+
+
+      .icon-wrapper {
+        ul {
+          li {
+            p {
+              @include media(">=tablet") {
+                margin-top: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .view-more {
+      margin-top: 20px;
+
+      @include media(">=tablet") {
+        margin-top: 40px;
+      }
+
+
+      @include media(">=desktop") {
+        margin-top: 60px;
+      }
+    }
+  }
+
+  #button-holder {
+    padding: 30px 0;
+
+    @include media(">=tablet") {
+      padding: 40px 0;
+    }
+
+
+    @include media(">=desktop") {
+      padding: 60px 0;
+    }
+  }
+
+  #customized {
+    padding: 30px 0;
+
+    @include media(">=tablet") {
+      padding: 40px 0;
+    }
+
+
+    @include media(">=desktop") {
+      padding: 60px 0;
+    }
+
+
+    .add-to-cart {
+      margin-top: 30px;
+
+      @include media(">=tablet") {
+        margin-top: 40px;
+      }
+
+
+      @include media(">=desktop") {
+        margin-top: 60px;
+      }
+    }
+
+    background-image: url(https://s3.amazonaws.com/dash-assets/assets/9c3fa365635c2875c3fb635ed27f9cc630d1e035.png);
+
+    .heading {
+      h1 {
+        font-size: 100px;
+        font-weight: bold;
+
+        @include media(">=tablet") {
+          color: #484848;
+          font-size: 70px;
+
+          span {
+            font-weight: normal;
+          }
+        }
+
+
+        @include media(">=desktop") {
+          font-size: 80px;
+        }
+      }
+
+      h2 {
+        font-size: 41px;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: normal;
+        color: $color;
+      }
+    }
+
+    .icon-wrapper {
+      margin-top: 10px;
+
+      .icon-text {
+        margin-top: 20px;
+        text-align: left;
+        padding-left: 14vw;
+
+        @include media(">=tablet") {
+          padding-left: 0;
+          text-align: center;
+        }
+
+
+        .icon {
+          color: $color;
+          font-size: 40px;
+          margin-right: 10px;
+
+          @include media(">=tablet") {
+            display: block;
+            font-size: 60px;
+            margin-bottom: 10px;
+            margin-right: 0;
+          }
+        }
+
+        span {
+          font-family: Montserrat;
+          font-size: 14px;
+          color: #484848;
+          text-transform: uppercase;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  #best-price {
+    margin-top: 0;
+    height: auto;
+    background: url(https://s3.amazonaws.com/SHREDZ-SITE/SHREDZ.COM/images/mealplan/compare-bg.png);
+    background-size: cover !important;
+    background-position: center, center;
+    background-repeat: no-repeat;
+
+    @include media(">=tablet") {
+      background: url(https://s3.amazonaws.com/SHREDZ-SITE/SHREDZ.COM/images/mealplan/comparison-bg-desktop.jpg);
+    }
+
+
+    .plan-comparison {
+      position: relative;
+
+      .next {
+        position: absolute;
+        top: -13%;
+        right: 0;
+        z-index: 12;
+        display: block;
+        height: 70px;
+        width: 50px;
+        color: white;
+
+        &:after {
+          font-family: FontAwesome;
+          content: "\f105";
+          font-size: 13vw;
+          float: right;
+          margin-right: 25%;
+        }
+      }
+
+      .prev {
+        position: absolute;
+        top: -13%;
+        left: 0;
+        z-index: 12;
+        display: block;
+        height: 70px;
+        width: 50px;
+        color: white;
+
+        &:after {
+          font-family: FontAwesome;
+          content: "\f104";
+          font-size: 13vw;
+          margin-left: 25%;
+        }
+      }
+
+      // padding: 0;
+      margin-top: 70px;
+      margin-bottom: 60px;
+
+      .col-plans {
+        box-shadow: 0px, 2px, 3px, 0px #000;
+        border: 1px solid #ccc;
+        padding: 0;
+        border-radius: 4px;
+      }
+
+      .col-others {
+        .price {
+          span {
+            color: #896FAE;
+          }
+        }
+      }
+
+      .col-shredz {}
+
+      .col-personal {
+        .price {
+          span {
+            color: #36B6EC;
+          }
+        }
+      }
+
+      .fadeOut {
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+
+      .fadeIn {
+        opacity: 1;
+        transition: opacity 0.3s;
+      }
+
+      .left {
+        // position: absolute;
+        left: 3px;
+        z-index: 1;
+        transition: 0.3s;
+
+        // padding: 5px;
+     
+      }
+
+      .middle {
+        transform: scale(1.2);
+        transition: transform 0.3s;
+
+        ul {
+          li {
+            font-size: 12px !important;
+          }
+        }
+      }
+
+      .right {
+        position: absolute;
+        right: 3px;
+        transition: 0.3s;
+
+        // padding: 5px;
+     
+      }
+
+      #shredz-plan {
+        // padding: 5px;
+        z-index: 10;
+        width: 50%;
+        margin-left: -10%;
+      }
+
+      .swipe-right {
+        position: absolute;
+        right: 0;
+        transform: scale(1) !important;
+        transition: transform 0.3s;
+      }
+
+      .swipe-left {
+        position: absolute;
+        left: 0;
+        transform: scale(1) !important;
+        transition: transform 0.3s;
+      }
+
+      .plan {
+        // padding: 0;
+        background: white;
+        padding: 10px;
+        border-radius: 3px 3px 0 0;
+
+        h4 {
+          font-weight: bold;
+          text-transform: uppercase;
+          text-align: center;
+
+          &.others {
+            color: #896FAE;
+            margin-bottom: 20px;
+
+            @include media(">=tablet") {
+              margin-top: 20px;
+              margin-bottom: 20px;
+            }
+          }
+
+          &.contract {
+            color: #36B6EC;
+            margin-bottom: 5px;
+
+            @include media("<tablet") {
+              font-size: 13px;
+            }
+
+
+            @include media(">=tablet") {
+              margin-bottom: 10px;
+              margin-top: 20px;
+            }
+          }
+        }
+
+        h6 {
+          color: #36B6EC;
+          font-weight: bold;
+          text-transform: uppercase;
+          text-align: center;
+          margin-bottom: 30px;
+
+          @include media("<tablet") {
+            font-size: 11px;
+          }
+
+
+          @include media(">=tablet") {
+            margin-bottom: 30px;
+          }
+        }
+
+        @include media(">=tablet") {
+          padding: 20px;
+        }
+
+
+        hr {
+          margin: 10px 0;
+        }
+
+        ul {
+          margin: 0;
+
+          @include media(">=tablet") {
+            padding: 20px 22px;
+          }
+
+
+          li {
+            color: #7A7A7A;
+            font-size: 12px;
+            text-transform: capitalize;
+            font-family: Lato;
+            margin-top: 10px;
+
+            @include media(">=tablet") {
+              font-size: 16px;
+              margin-top: 18px;
+            }
+
+
+            .fa {
+              color: #7ED321;
+              margin-right: 5px;
+
+              @include media(">=tablet") {
+                margin-right: 10px;
+              }
+
+
+              &.color-yellow {
+                color: #D3CF21;
+              }
+
+              &.fa-times {
+                color: #FF004F;
+              }
+            }
+          }
+        }
+      }
+
+      .price {
+        margin: 0;
+        background: #D8D8D8;
+        padding: 10px;
+        text-align: center;
+        border-radius: 0 0 3px 3px;
+
+        del {
+          color: #484848;
+
+          @include media(">=tablet") {
+            font-size: 18px;
+          }
+        }
+
+        span {
+          color: #FD4739;
+
+          @include media(">=tablet") {
+            font-size: 26px;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+
+  #gives-everything {
+    padding: 30px 0;
+    background: #F2F2F2;
+
+    @include media(">=tablet") {
+      padding: 40px 0;
+    }
+
+
+    @include media(">=desktop") {
+      padding: 60px 0;
+    }
+
+
+    h2 {
+      font-family: Lato;
+      text-transform: uppercase;
+      text-align: center;
+      color: $color;
+
+      // margin: 30px 0;
+   
+    }
+  }
+
+  #whats-included {
+    padding: 30px 0;
+
+    @include media(">=tablet") {
+      padding: 40px 0;
+    }
+
+
+    @include media(">=desktop") {
+      padding: 60px 0;
+    }
+
+
+    .container {
+      @include media(">=1600px") {
+        width: 1500px;
+      }
+    }
+
+    .heading {
+      // margin-bottom: 15px;
+
+      @include media(">=tablet") {
+        // margin-bottom: 30px;
+      }
+
+
+      h2 {
+        text-align: center;
+        text-transform: uppercase;
+        color: #484848;
+      }
+    }
+
+    .item-wrapper {
+      .item {
+        border: none;
+
+        .col {
+          margin-top: 30px;
+
+          @include media(">=desktop") {
+            margin-top: 40px;
+          }
+
+
+          h4 {
+            margin-top: 15px;
+            color: $color;
+          }
+
+          img {
+            max-height: 150px;
+            margin: 0 auto;
+
+            @include media(">=tablet") {
+              max-height: 160px;
+            }
+          }
+
+          p {
+            margin-top: 5px;
+            font-family: Lato;
+            color: #747474;
+          }
+        }
+      }
+    }
+  }
+
+  #bonus-gift {
+    // margin-top: 30px;
+    background: rgba(231, 231, 231, 0.6);
+    padding-bottom: 0;
+
+    @include media(">=tablet") {
+      background: transparent;
+    }
+
+
+    .container {
+      // margin-top: 20px;
+      // padding: 30px 0;
+
+      @include media(">=tablet") {
+        padding: 40px 0;
+      }
+
+
+      @include media(">=desktop") {
+        padding: 60px 0;
+      }
+
+
+      @include media(">=1600px") {
+        width: 1500px;
+      }
+
+
+      .add-to-cart {
+        @include media(">=tablet") {
+          margin-top: 30px;
+        }
+      }
+
+      .gift {
+        text-align: center;
+        padding: 30px 0;
+
+        ul {
+          margin: 0;
+          margin-top: 15px;
+
+          li {
+            color: $color;
+            text-transform: uppercase;
+            font-size: 11px;
+            font-size: 3vw;
+            font-weight: bold;
+
+            span {
+              display: inline-block;
+              vertical-align: middle;
+            }
+
+            .fa {
+              margin-top: -2px;
+              color: #484848;
+              font-size: 8px;
+              display: inline-block;
+              vertical-align: middle;
+            }
+          }
+        }
+
+        @include media(">=tablet") {
+          background: none;
+          border: 1px solid #E7E7E7;
+          padding: 15px;
+        }
+
+
+        img {
+          max-height: 200px;
+          margin: 0 auto;
+        }
+
+        h4 {
+          color: $color;
+          text-transform: capitalize;
+
+          @include media(">=tablet") {
+            margin-top: 20px;
+          }
+        }
+
+        p {
+          margin-top: 5px;
+          font-family: Lato;
+          color: #747474;
+        }
+      }
+    }
+  }
+
+  //////////////////
+  //  Q/A
+  //////////////////
+
+  #question-answer {
+    .container {
+      padding-bottom: 30px;
+
+      @include media(">=tablet") {
+        padding: 40px 0;
+      }
+
+
+      @include media(">=desktop") {
+        padding: 60px 0;
+      }
+
+
+      h2 {
+        text-align: center;
+        color: #484848;
+        text-transform: uppercase;
+      }
+
+      h6 {
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #484848;
+      }
+
+      .link {
+        color: $color;
+        text-align: center;
+        display: block;
+      }
+
+      .qa-wrapper {
+        margin-top: 15px;
+
+        .qa {
+          &:first-child {
+            margin-top: 10px;
+          }
+
+          @include media(">=tablet") {
+            text-align: center;
+          }
+
+
+          p {
+            font-family: Lato;
+
+            &.question {
+              color: #484848;
+              font-size: 16px;
+              font-weight: bold;
+              margin-bottom: 0;
+
+              @include media(">=tablet") {
+                font-size: 18px;
+              }
+            }
+
+            &.answer {
+              font-size: 14px;
+              color: #747474;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //////////////////
+  //  REVIEWS
+  //////////////////
+
+  #reviews {
+    background: #EFEFEF;
+
+    // padding: 30px 0 20px 0;
+
+    &.modal-reviews {
+      background: #fff;
+
+      h3 {
+        span {
+          background: #fff;
+        }
+      }
+    }
+
+    @include media(">=tablet") {
+      margin-top: 0;
+
+      // padding: 40px 0;
+    }
+
+
+    // @include media(">=desktop") {
+    //   padding: 60px 0;
+    // }
+
+    hr {
+      @include media(">=tablet") {
+        border: 1px solid #CFCFCF;
+      }
+    }
+
+    h3 {
+      margin-top: 30px;
+
+      &.horizontal-line {
+        @include horizontal-line(#E6E6E6);
+      }
+    }
+
+    p {
+      &.average-ratings {
+        margin-top: 10px;
+        text-align: center;
+
+        .fa {
+          color: #F1DA1A;
+
+          &:before {
+            font-size: 18px;
+            -webkit-text-stroke: #EBBF11;
+            -webkit-text-stroke-width: 1px;
+          }
+        }
+      }
+    }
+
+    .reviews-wrapper {
+      height: auto;
+
+      .recent-reviews {
+        // background: #E6E6E6;
+
+        // padding-bottom: 30px;
+
+        @include media(">=tablet") {
+          padding-bottom: 40px;
+          padding-left: 40px;
+          padding-right: 40px;
+        }
+
+
+        @include media(">=desktop") {
+          padding-bottom: 60px;
+          padding-left: 70px;
+          padding-right: 70px;
+        }
+
+
+        h2 {
+          margin-top: 30px;
+          text-align: center;
+          color: #484848;
+          text-transform: uppercase;
+
+          @include media(">=tablet") {
+            margin-top: 40px;
+          }
+
+
+          @include media(">=desktop") {
+            margin-top: 60px;
+          }
+        }
+      }
+
+      .review {
+        border-top: 1px solid #CFCFCF;
+        padding-top: 20px;
+
+        &:first-child {
+          border-top: none;
+        }
+
+        &:last-child {
+          border-bottom: 1px solid #CFCFCF;
+
+          @include media(">=tablet") {
+            border-bottom: none;
+            padding-bottom: 0;
+          }
+        }
+
+        @include media(">=tablet") {
+          border-top: none;
+          padding-top: 0;
+        }
+
+
+        .user-ratings {
+          .fa {
+            color: #F1DA1A;
+
+            &:before {
+              font-size: 14px;
+              -webkit-text-stroke: #EBBF11;
+              -webkit-text-stroke-width: 1px;
+            }
+          }
+
+          .heading {
+            margin-left: 5px;
+            color: #484848;
+          }
+        }
+
+        .full-review {
+          p {
+            margin-top: 10px;
+            color: #747474;
+
+            &.featuredReview {
+              @include media(">=tablet") {
+                @include ellipsis(3);
+              }
+            }
+
+            &.reviewer {
+              font-family: Lato;
+              color: #484848;
+              font-size: 12px;
+              font-style: italic;
+              text-align: right;
+
+              @include media(">=tablet") {
+                text-align: left;
+                color: #AFAFAF;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .review-counter {
+      @include media(">=tablet") {
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+
+
+      @include media(">=desktop") {
+        padding-left: 50px;
+        padding-right: 50px;
+      }
+
+
+      h5 {
+        @include media(">=tablet") {
+          text-transform: uppercase;
+          text-align: center;
+          color: #747474;
+        }
+      }
+
+      ul {
+        margin-top: 20px;
+
+        li {
+          margin-top: 10px;
+          font-size: 18px;
+          font-family: Lato;
+          color: #484848;
+          text-align: left;
+          position: relative;
+
+          span {
+            &.count {
+              float: right;
+            }
+          }
+
+          &:first-child {
+            margin-top: 0;
+          }
+
+          .highlighter {
+            content: "";
+            background: #F1DA1A;
+            display: block;
+            height: 8px;
+            margin-top: 1px;
+            position: absolute;
+            left: 1px;
+          }
+
+          .rating-bar {
+            height: 10px;
+            width: 100%;
+            border: 1px solid #cfcfcf;
+          }
+        }
+      }
+    }
+  }
+
+  #meet-coaches {
+    display: none;
+    margin-top: 30px;
+
+    @include media(">=tablet") {
+      margin-top: 0;
+    }
+
+
+    .heading {
+      margin-bottom: 30px;
+
+      @include media(">=tablet") {
+        margin-top: 60px;
+      }
+
+
+      h2 {
+        text-align: center;
+        text-transform: uppercase;
+        color: #484848;
+        font-family: Montserrat;
+
+        @include media(">=tablet") {
+          color: $color;
+          text-align: center;
+        }
+      }
+
+      p {
+        margin-top: 15px;
+        font-family: Lato;
+        color: #747474;
+        line-height: 1.6;
+        padding: 0 10px;
+        text-align: center;
+
+        @include media(">=tablet") {
+          color: white;
+          font-size: 18px;
+        }
+      }
+    }
+
+    .coaches {
+      .cover-image {
+        padding-bottom: 15px;
+
+        // height: 375px;
+        background: url(https://s3.amazonaws.com/SHREDZ-SITE/SHREDZ.COM/images/mealplan/wood-pattern.jpg);
+
+        // background-size: cover;
+        background-position: center, center;
+        background-repeat: repeat;
+
+        @include media(">=tablet") {
+          // height: 450px;
+          padding-bottom: 60px;
+        }
+      }
+
+      .col {
+        padding: 0 10px;
+        margin-top: 15px;
+      }
+
+      .coach {
+        position: relative;
+        cursor: pointer;
+
+        img {
+          width: 100%;
+        }
+
+        .name {
+          position: absolute;
+          background: rgba(0, 0, 0, 0.8);
+          z-index: 9;
+          bottom: 0;
+          text-align: center;
+          width: 100%;
+
+          h6 {
+            margin: 10px 0 1px;
+            font-weight: 300;
+            color: white;
+            font-size: 12px;
+            font-size: 3vw;
+
+            @include media(">=tablet") {
+              font-size: 18px;
+            }
+
+
+            @include media(">=desktop") {
+              font-size: 22px;
+            }
+          }
+
+          p {
+            color: $color;
+            font-family: 'Lato';
+            font-weight: 400;
+            margin-bottom: 8px;
+            letter-spacing: .06em;
+            cursor: pointer;
+
+            @include media("<=tablet") {
+              font-size: 3vw;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .modal {
+    .disclaimer {
+      display: none;
+    }
+
+    h2.modal-title {
+      text-transform: uppercase;
+      font-weight: 100;
+      text-align: center;
+      font-size: 18px;
+      color: #484848;
+      padding: 15px 0;
+    }
+
+    .close {
+      background: transparent;
+      color: #AFAFAF;
+      opacity: 1;
+      position: absolute;
+      right: 20px;
+      top: 15px;
+      font-size: 20px;
+
+      @include media(">=tablet") {
+        right: 15px;
+        top: 15px;
+        font-size: 36px;
+      }
+    }
+
+    .modal-body {
+      padding: 30px 30px 0;
+
+      img {
+        border-radius: 50%;
+        display: block;
+        border: 2px solid #ccc;
+        margin: 0 auto;
+        width: 200px;
+      }
+
+      .content {
+        h3 {
+          margin-bottom: 7px;
+          font-size: 16px;
+          color: #747474;
+          font-weight: bold;
+        }
+
+        p {
+          font-weight: 400;
+          font-family: 'Lato';
+          color: #747474;
+        }
+
+        .credentials, .expertise, .about {
+          margin-top: 30px;
+
+          p {
+            margin-bottom: 0;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    .modal-cta {
+      text-align: center;
+      padding-bottom: 40px;
+
+      .cta {
+        font-size: 25px;
+        letter-spacing: 2px;
+        border-radius: 3px;
+        padding: 12px 35px 8px;
+        margin-top: 25px;
+      }
+    }
+
+    .disclaimer {
+      color: #c0c0c0;
+      font-weight: 400;
+      font-family: 'Lato';
+      text-transform: uppercase;
+      line-height: 1.2;
+      font-size: 9px;
+      padding: 20px 50px 40px;
+    }
+  }
+
+  #become-yourself {
+    padding: 30px 0;
+
+    @include media(">=tablet") {
+      padding: 40px 0;
+    }
+
+
+    @include media(">=desktop") {
+      padding: 60px 0;
+    }
+
+
+    h1 {
+      font-size: 26px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #939393;
+      font-weight: bold;
+      letter-spacing: 0.02em;
+
+      @include media(">=tablet") {
+        font-size: 36px;
+      }
+
+
+      @include media(">=desktop") {
+        font-size: 42px;
+      }
+    }
+
+    p {
+      margin-top: 5px;
+      font-size: 16px;
+      color: #939393;
+      font-family: Lato;
+      text-align: center;
+    }
+
+    .add-to-cart {
+      margin-top: 15px;
+    }
+  }
+}
+
+.meal-plan {
+  @include meal-plan(#cc0000);
+}
+
+.meal-plan .main-content.male {
+  @include meal-plan(#cc0000);
+}
+
+.product-page .main-content {
+  @include meal-plan(#cc0000);
+}
+
+.meal-plan .main-content.female {
+  @include meal-plan(#ff0095);
+}

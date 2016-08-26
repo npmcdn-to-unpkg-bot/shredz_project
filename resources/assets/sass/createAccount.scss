@@ -1,0 +1,185 @@
+
+
+.createAccount {
+  padding-bottom: 40px;
+
+  .content .inputs {
+    overflow: auto;
+  }//.content .inputs
+
+  #signup {
+    margin-top: 30px;
+    clear: both;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .createAccount {
+    margin-right: 3%;
+    margin-left: 3%;
+    width: 94%;
+  }
+}
+
+.r_label {
+  /* margin-top: -12px; */
+  top: -10px;
+  margin-left: -8px;
+  position: relative;
+  left: -10px;
+}
+
+/* line 6, ../sass/createAccount.scss */
+
+.createAccount {
+  .bread {
+    background-color: transparent;
+    padding: 20px 0;
+    p {
+      font-family: Helvetica, Arial;
+      color: #666666;
+      font-size: 12px;
+      font-weight: 300;
+      margin: 0;
+      b {
+        font-weight: 700;
+      }
+    }
+  }
+  h1 {
+    font-family: Montserrat, sans-serif;
+    font-size: 52px;
+    font-weight: 900;
+    margin: 50px 0;
+    text-align: center;
+  }
+  form button {
+    font-family: Montserrat, sans-serif;
+    color: white;
+    font-size: 26px;
+    font-weight: 900;
+    padding: 10px 90px;
+    background-color: $shredz-primary;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 3px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    display: block;
+    margin: 0 auto;
+    margin-top: 130px;
+  }
+}
+
+/* line 10, ../sass/createAccount.scss */
+
+/* line 17, ../sass/createAccount.scss */
+
+/* line 23, ../sass/createAccount.scss */
+
+@media screen and (max-width: 990px) {
+  .createAccount h1 {
+    font-size: 30px;
+    margin-top: 79px;
+  }
+}
+
+/* line 34, ../sass/createAccount.scss */
+
+#signup:hover {
+  background-color: #990000;
+}
+
+@media screen and (max-width: 990px) {
+  .createAccount form button {
+    width: 90%;
+  }
+}
+
+/* line 49, ../sass/createAccount.scss */
+
+.createAccount form {
+  p {
+    font-family: Helvetica, Arial;
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 2px;
+  }
+  .strings {
+    float: left;
+    width: 48%;
+    width: calc(50% - 60px);
+    padding: 0 30px;
+    input {
+      font-family: Lato, sans-serif;
+      font-size: 18px;
+      color: #1a1a1a;
+      font-weight: 400;
+      padding: 10px;
+      width: 90%;
+      margin-bottom: 10px;
+      border-radius: 3px;
+      border: 1px solid #c0c0c0;
+    }
+
+    @include media('<1076px')
+    {
+      width: 100%;
+      float: none;
+
+      input {
+        width: 100%;
+      }
+    }
+  }
+  .numeric {
+    float: right;
+    width: 48%;
+    width: calc(50% - 60px);
+    padding: 0 30px;
+    input {
+      padding: 8px 0;
+      padding-left: 8px;
+      border-radius: 3px;
+      border: 1px solid $light-grey;
+    }
+    p {
+      margin: 0;
+      display: inline-block;
+      &.light {
+        font-size: 11px;
+        color: #666666;
+        font-weight: 400;
+      }
+    }
+    .row {
+      p {
+        margin-top: 28px;
+        margin-bottom: 0;
+        border-radius: 3px;
+      }
+      &:nth-child(1) p {
+        margin-top: 0;
+      }
+      .radio {
+        top: 4px;
+        margin-right: 14px;
+        margin-left: 14px;
+        &:nth-child(1) {
+          margin-left: 0;
+        }
+      }
+    }
+
+    @include media('<1076px') {
+      display: block;
+      float: none;
+      margin: auto;
+      margin-top: 40px;
+      width: 360px;
+    }
+  }
+}

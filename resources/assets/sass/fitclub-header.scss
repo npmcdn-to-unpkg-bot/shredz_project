@@ -1,0 +1,251 @@
+#banner {
+  h1, h2, h3, h4 {
+    font-weight: bold;
+  }
+
+  border-bottom: 5px solid #cc0000;
+
+  .carousel-holder {
+    padding: 0;
+    height: 140px;
+    background: url(../images/fitclub/fitclub-bg.jpg) center center no-repeat;
+    background-size: cover;
+
+    @include media(">=tablet") {
+      height: 240px;
+    }
+
+
+    img {
+      max-width: 100px;
+      margin-top: 20px;
+
+      @include media(">=tablet") {
+        margin-top: 40px;
+        max-width: 160px;
+      }
+    }
+  }
+}
+
+#member-profile {
+  background-color: #E6E6E6;
+  padding: 15px 0;
+
+  img {
+    max-height: 60px;
+    display: inline;
+
+    @include media(">=mobile") {
+      max-height: 70px;
+    }
+
+
+    @include media(">=tablet") {
+      max-height: 80px;
+    }
+  }
+
+  .initials {
+    background: darkgray;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    width: 60px;
+    height: 60px;
+
+    @include media(">=tablet") {
+      width: 80px;
+      height: 80px;
+    }
+
+
+    ul {
+      position: absolute;
+      margin: 0;
+      top: 15px;
+      left: 13px;
+
+      li {
+        font-size: 22px;
+        padding: 0;
+        color: #747474;
+
+        @include media(">=tablet") {
+          font-size: 36px;
+        }
+      }
+    }
+  }
+
+  h3 {
+    display: inline;
+    text-transform: capitalize;
+    font-family: Montserrat;
+    font-size: 12px;
+    margin-left: 10px;
+    font-size: 4vw;
+    color: #747474;
+
+    &.my-profile {
+      border-left: 1px solid #cc0000;
+      display: inline;
+
+      @include media(">=tablet") {
+        display: none;
+      }
+
+
+      color: #cc0000;
+      padding-left: 10px;
+    }
+
+    @include media(">=mobile") {
+      font-size: 3vw;
+    }
+
+
+    @include media(">=tablet") {
+      font-size: 20px;
+    }
+  }
+
+  .my-fitclub {
+    h4 {
+      // margin-top: 12px;
+
+      a {
+        color: #cc0000;
+
+        span {
+          font-family: Bebas;
+          font-size: 20px;
+          text-transform: uppercase;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}
+
+#fitclub-header {
+  .filter-bar {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+
+    @include media("<=600px") {
+      font-size: .65em;
+      font-size: 2.2vw;
+    }
+
+
+    .content {
+      position: relative;
+    }
+
+    .first-nav, .second-nav {
+      text-align: center;
+      border-bottom: 1px solid #AFAFAF;
+      overflow-y: hidden;
+
+      @include media("<=600px") {
+        text-align: center;
+      }
+
+
+      @include media("<tablet") {
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+
+
+      .nav-item {
+        display: inline-block;
+        height: 2.8em;
+        padding: 0 12px;
+        appearance: none;
+        line-height: 3em;
+        cursor: pointer;
+        margin: 0 0.25em;
+        text-align: center;
+        transition: background-color 0.2s;
+        font-weight: 100;
+        letter-spacing: .1em;
+        font-family: 'Bebas';
+        font-size: 5vw;
+        padding: 0;
+        margin: 0;
+        width: 32.9%;
+        text-align: center;
+
+        @include media(">=tablet") {
+          margin: 0;
+          font-size: 16px;
+          width: 105px;
+        }
+
+
+        @include media(">=desktop") {
+          margin: 0 5px;
+          font-size: 20px;
+          width: 120px;
+
+          // width: 33.3%;
+        }
+
+
+        &.active {
+          height: 2.75em;
+
+          @include media(">=desktop") {
+            width: 120px;
+          }
+        }
+
+        span {
+          font-family: 'Bebas';
+          font-weight: 700;
+          font-size: 23px;
+        }
+
+        // @include media("<=tablet") {
+
+        // }
+
+        &.active {
+          background-color: #cc0000;
+          color: lighten(#cc0000, 60%);
+        }
+      }
+
+      @include media("<=600px") {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    .first-nav {
+      background: #282828;
+
+      a {
+        color: #fff;
+      }
+    }
+
+    .second-nav {
+      background: #E6E6E6;
+
+      .nav-item {
+        @include media("<tablet") {
+          width: 25%;
+        }
+      }
+
+      a {
+        color: #282828;
+      }
+    }
+  }
+}

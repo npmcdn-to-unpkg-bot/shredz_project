@@ -1,0 +1,385 @@
+
+
+/*ceo-messages.scss*/
+.inside-section-margin{
+  margin-top: 30px;
+}
+.icon-style{
+  font-size: 50px;
+  color: $shredz-primary;
+}
+.ceo-message {
+  padding-bottom: 35px;
+
+  .wrapper {
+    padding: 0 20px;
+  }//.content
+
+  h2 {
+    font-weight: 600;
+    font-size: 30px;
+    color: $darkGrey;
+    font-family: Montserrat, sans-serif;
+    margin: 0;
+
+    &.light {
+      font-weight: 300;
+    }//&.light
+
+    &.red {
+      color: $shRed;
+    }//&.red
+
+    &.large {
+      font-size: 35px;
+      font-weight: 700;
+    }//&.large
+
+    &.centered {
+      text-align: center;
+    }//&.centered
+
+    &.welcome {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 27px;
+      font-weight: 600;
+      line-height: 38px;
+    }//&.welcome
+
+    &.recommendation {
+      text-align: center;
+      font-size: 22px;
+      font-weight: 700;
+      margin-top: 60px;
+      margin-bottom: 40px;
+    }//.recommendation
+
+    &.follow {
+      text-align: center;
+      font-size: 22px;
+      font-weight: 600;
+      margin-top: 55px;
+    }//&.follow
+  }//h2
+
+  h3 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: $darkGrey;
+    font-family: Montserrat, sans-serif;
+
+    &.thanks {
+      color: $shRed;
+      margin-top: 28px;
+      font-size: 21px;
+      font-weight: 300;
+      text-align: center;
+    }//&.thanks
+  }//h3
+
+  p {
+    color: $darkGrey;
+    font-family: Helvetica;
+    font-size: 15px;
+    font-weight: 300;
+
+    &.intro {
+      margin-top: 32px;
+      text-align: center;
+      font-family: Montserrat;
+    }//&.intro
+
+    &.slight-bold {
+      font-family: Montserrat;
+      font-weight: 400;
+      font-size: 17px;
+      margin-top: 40px;
+    }//&.slight-bold
+  }//p
+
+  .ceo-container {
+    background-image: url("/images/arvin-ceo-message.png");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    h2 {
+      color: white;
+    }//h2, h3
+
+    .wrapper {
+      padding-top: 173px;
+      padding-bottom: 15px;
+    }//.wrapper
+  }//.ceo-container
+
+  .steps {
+    padding-top: 47px;
+  }//.steps
+
+  .step {
+    margin-top: 60px;
+
+    img {
+      margin-top: 7px;
+      vertical-align: top;
+    }//img
+
+    .text {
+      display: inline-block;
+    }//.text
+
+    p {
+      clear: both;
+      margin-top: 8px;
+    }//p
+  }//.step
+
+  button {
+    @include border-radius(3px);
+    border: none;
+    @include appearance(none);
+    display: block;
+    margin: auto;
+    background-color: $shRed;
+    color: white;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 900;
+    padding: 15px 30px;
+    margin-top: 40px;
+
+    @include media('<=1200px') {
+      font-size: 20px !important;
+      padding: 10px 10px !important;
+    }
+
+    &.female {
+      background-color: $female;
+    }//&.female
+  }//button
+
+  .youtube-video-container {
+    margin: 30px 0;
+    width: 100%;
+    height: 200px;
+    outline: 1px solid;
+  }//.youtube-video-container
+
+  .product {
+    margin-top: 20px;
+
+    img {
+      width: 270px;
+      height: 270px;
+      display: block;
+      margin: auto;
+    }//img
+
+    button {
+      margin-top: 20px;
+      font-size: 18px;
+      padding: 15px 35px;
+    }//button
+  }//.product
+
+  .icon-smartphone {
+    width: 22px;
+    height: 39px;
+    margin-left: 29px;
+    margin-right: 17px;
+  }//.icon-smartphone
+
+  .icon-check {
+    width: 36px;
+    height: 27px;
+    margin-left: 20px;
+    margin-right: 12px;
+  }//.icon-checl
+
+  .icon-money {
+    width: 38px;
+    height: 28px;
+    margin-left: 21px;
+    margin-right: 10px;
+  }//.icon-money
+
+  .flex-wrap {
+    width: 345px;
+    margin: auto;
+  }//.flex-wrap
+
+  .social-media-icons {
+    margin-top: 32px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+
+    .icon-facebook {
+      width: 21px;
+      height: 41px;
+    }//.icon-facebook
+
+    .icon-twitter {
+      width: 50px;
+      height: 42px;
+    }//.icon-twitter
+
+    .icon-insta {
+      width: 44px;
+      height: 44px;
+    }//.icon-insta
+
+    .icon-pin {
+      width: 38px;
+      height: 50px;
+    }//.icon-pin
+  }//.social-media-icons
+
+  @include media('>=900px') {
+
+    .wrapper {
+      width: 880px;
+      display: block;
+      margin: auto;
+    }//.wrapper
+
+    h2 {
+      font-size: 40px;
+
+      &.large {
+        font-size: 45px;
+      }//&.large
+
+      &.welcome {
+        font-size: 38px;
+      }//&.welcome
+
+      &.thanks {
+        font-size: 25px;
+      }//&.thanks
+
+      &.follow {
+        display: inline-block;
+      }//&.follow
+    }//h2
+
+    p {
+
+      &.intro {
+        font-size: 20px;
+      }//&.intro
+    }//p
+
+    .ceo-container {
+
+      .wrapper {
+        padding-top: 346px;
+      }//.wrapper
+
+      h2 {
+        display: inline-block;
+        margin-right: 24px;
+      }//h2
+    }//.ceo-container
+
+    .steps {
+      overflow: auto;
+    }//.steps
+
+    .step {
+      float: left;
+      width: 360px;
+      margin-right: 25px;
+
+      h2 {
+        font-size: 30px;
+      }//h2
+
+      h3 {
+        font-size: 12px;
+      }//h3
+
+      &.last {
+        margin-right: 0;
+      }//&.last
+    }//.step
+
+    .icon-check {
+      margin-left: 3px;
+      margin-right: 11px;
+    }//.icon-check
+
+    .icon-money {
+      margin-left: 4px;
+      marign-right: 10px;
+    }//.icon-money
+
+    button {
+      font-size: 18px;
+      padding: 16px 16px;
+    }//button
+
+    .youtube-video-container {
+      height: 500px;
+    }//.youtube-video-container
+
+    .center-wrap {
+      text-align: center;
+    }//.center-wrap
+
+    .flex-wrap {
+      display: inline-block;
+      width: 200px;
+      position: relative;
+      left: 30px;
+      top: -5px;
+    }//.flex-wrap
+
+    .products {
+      text-align: center;
+    }//.products
+
+    .product {
+      margin-left: 10px;
+      margin-right: 10px;
+      display: inline-block;
+
+      img {
+        width: 150px;
+        height: 150px;
+      }//img
+
+      button {
+        font-size: 10px;
+        padding: 8px 20px;
+      }//button
+    }//.product
+
+    .social-media-icons {
+
+      .icon-facebook {
+        width: 12px;
+        height: 23px;
+      }//.icon-facebook
+
+      .icon-twitter {
+        width: 28px;
+        height: 24px;
+      }//.icon-twitter
+
+      .icon-insta {
+        width: 25px;
+        height: 25px;
+      }//.icon-insta
+
+      .icon-pin {
+        width: 21px;
+        height: 28px;
+      }//.icon-pin
+    }//.social-media-icons
+  }//breakpoint desktop
+}//.ceo-message

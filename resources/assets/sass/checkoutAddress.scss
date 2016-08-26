@@ -1,0 +1,162 @@
+
+.no_acct {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+#username {
+  margin-top: 25px;
+}
+
+.shipbill .container {
+  width: 900px;
+  margin: 23px auto;
+  .edit {
+    overflow: auto;
+    .left {
+      vertical-align: middle;
+      a {
+        text-decoration: none;
+      }
+      p {
+        color: #999999;
+        font-size: 14px;
+        font-weight: 400;
+        font-family: Lato, sans-serif;
+      }
+    }
+    .right {
+      float: right;
+      vertical-align: middle;
+      img {
+        width: 53px;
+        height: 33px;
+      }
+    }
+  }
+  .shipping, .billing {
+    vertical-align: top;
+    width: 100%;
+    background-color: whitesmoke;
+    padding-bottom: 15px;
+    border-radius: 3px;
+  }
+  .shipping h2, .billing h2 {
+    font-family: Montserrat, sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+    color: #333333;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+  }
+  .shipping p, .billing p {
+    color: $light-grey;
+    margin-right: 10px;
+    display: none;
+  }
+  .shipping input, .billing input {
+    padding: 15px;
+    margin-top: 16px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border-radius: 3px;
+    border: 1px solid $light-grey;
+  }
+  .shipping .row, .billing .row {
+    text-align: right;
+  }
+  .copy {
+    margin: 11px 0;
+    overflow: auto;
+    input, label, button {
+      vertical-align: middle;
+    }
+    label, input {
+      position: relative;
+      top: 16px;
+      float: left;
+    }
+    label {
+      font-family: Helvetica, Arial;
+      font-size: 11px;
+      margin-top: 2px;
+      color: #999999;
+    }
+    button {
+      background-color: #3a85bf;
+      float: right;
+      width: 250px;
+      height: 50px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: non;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      border: none;
+      color: white;
+      font-family: Montserrat, sans-serif;
+      font-size: 24px;
+      font-weight: 900;
+      transition: background-color .5s;
+      &:readonly {
+        background-color: grey;
+        transition: background-color .5s;
+      }
+      &:hover {
+        background-color: #4B85B3;
+        transition: background-color .5s;
+      }
+    }
+  }
+}
+
+
+.input_error_other {
+  
+  -webkit-box-shadow: -1px 0px 5px 0px rgba(204, 0, 0, 0.4);
+  -moz-box-shadow: -1px 0px 5px 0px rgba(204, 0, 0, 0.4);
+  border: 1px solid $shredz-primary;
+  outline: none;
+  box-shadow: 0px 0px 5px 0px rgba(204, 0, 0, 0.4);
+}
+
+#error_message {
+  background-color: rgba(204, 0, 0, 0.1);
+  border: 1px solid rgba(204, 0, 0, 0.3);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 3px;
+  padding-left: 21px;
+  font-family: Montserrat, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  margin-bottom: 15px;
+}
+.items{
+  width: 100%;
+}
+@media (max-width: 950px) {
+
+  .shipbill .container {
+    width: 90%;
+    min-width: 275px;
+    margin-top: 60px;
+    .shipping p, .billing p {
+      float: left;
+    }
+    .copy button {
+      float: none;
+      display: block;
+      margin: auto;
+      margin-top: 20px;
+    }
+  }
+
+
+}

@@ -1,0 +1,33 @@
+{
+  "name": "shredz_com_v2",
+  "description": "SHREDZ.COM Version2.5",
+  "main": "",
+  "authors": [
+    "John Cui <j.cui@shredz.com>"
+  ],
+  "license": "Commercial",
+  "homepage": "https://github.com/fitlifegroup/shredz_com_v2",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "dist"
+  ],
+  "dependencies": {
+    "console-polyfill": "^0.2.2",
+    "jquery_lazyload": "jquery.lazyload#^1.9.7",
+    "jquery-bar-rating": "^1.1.4",
+    "bourbon": "~4.2.6",
+    "include-media": "^1.4.2",
+    "bootstrap-sass": "^3.3.6"
+  },
+  "devDependencies": {
+    "bourbon": "~4.2.6",
+    "include-media": "^1.4.2",
+    "bootstrap-sass": "^3.3.6"
+  }
+}

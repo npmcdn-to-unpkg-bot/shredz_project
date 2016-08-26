@@ -1,0 +1,197 @@
+
+
+/*athlete-list.scss*/
+
+.athlete-list {
+
+  padding-top: 20px;
+
+  .main-title{
+    text-align: center;
+    margin: 60px 0 40px;
+    font-size: 65px;
+  }
+  .sub-title{
+    text-align: center;
+    margin: 50px 0 50px; 
+    font-size: 50px;
+  }
+
+  .container-athlete{
+    border-bottom: 1px solid #e9e9e9;
+    border-top: 1px solid #e9e9e9;
+  }
+
+  h2, h3, p {
+    margin: 0;
+  }//h2, h3, p
+
+  h2 {
+    font-size: 30px;
+    font-family: Montserrat, sans-serif;
+    font-weight: 700;
+    color: $darkGrey;
+  }//h2
+
+  p {
+    font-size: 14px;
+    font-family: Helvetica;
+    font-weight: 300;
+    line-height: 20px;
+  }//p
+
+  .favorites{
+    font-size: 26px;
+    opacity: .9;
+  }
+  
+  .name{
+    // margin: 10px 0 40px;
+    font-size: 37px;
+  }
+  .name, .favorites, .athlink p {
+    text-transform: uppercase;
+  }//.name, .favorites
+
+  .greyBackground {
+    background-color: $light-grey;
+  }//.greyBackground
+
+  
+
+  .featured-athlete {
+    padding: 40px 0;
+
+    &:first-child{
+      .photo{
+        border-radius: 30px 0 0 30px;
+      }
+  
+      .right.photo{
+        border-radius: 0 30px 30px 0;
+      }
+
+    }
+
+    .photo {
+      width: 360px;
+      height: 360px;
+      vertical-align: top;
+
+      &.right {
+        float: right;
+      }//&.right
+    }//.profile
+
+    .info {
+      display: inline-block;
+      margin-left: 50px;
+      width: calc(100% - 414px);
+
+      p {
+        margin-top: 30px;
+      }//p
+
+      .favorites {
+        margin-top: 39px;
+      }//.favorites
+
+      .products {
+        margin-top: 24px;
+
+        img {
+          width: 170px;
+          margin-left: 8px;
+          margin-right: 8px;
+
+          &.first {
+            margin-left: 0;
+          }//&.first
+
+          &.last {
+            margin-right: 0;
+          }//&.last
+        }//img
+      }//.products
+
+      &.left {
+        margin-right: 50px;
+        margin-left: 0;
+      }//&.left
+    }//.info
+
+    button {
+      display: block;
+      margin-top: 16px;
+      font-family: Montserrat, sans-serif;
+      font-weight: 700;
+      color: white;
+      font-size: 14px;
+      padding: 15px 23px;
+      @include appearance(none);
+      @include border-radius(3px);
+      border: none;
+      background-color: $shRed;
+
+      &.female {
+        background-color: $female;
+      }//&.female
+    }//button
+  }//.athlete
+
+  .all-athletes {
+    text-align: center;
+    padding-top: 38px;
+    padding-bottom: 38px;
+  }//.all-athletes
+
+  h1 {
+    margin-bottom: 43px;
+  }//h2
+
+  .athlink {
+    display: inline-block;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-bottom: 32px;
+
+    p {
+      margin-top: 13px;
+      font-size: 15px;
+      font-family: Montserrat, sans-serif;
+      font-weight: 600;
+      color: $darkGrey;
+    }//p
+
+    &.first {
+      margin-left: 0;
+    }//&.first
+
+    &.last {
+      margin-right: 0;
+    }//&.last
+  }//.athlink
+
+  @include media('<=1000px') {
+    
+
+
+    .main-title{
+      font-size: 26px;
+      margin: 70px 0 20px;
+    }
+
+    .sub-title{
+      display: none;
+    }
+  
+    .greyBackground{
+      background: $white;
+    }
+    
+    .featured-athlete {
+      display: none;
+
+    }//.athlink
+  }//breakpoint mobile
+}//.athlete-list

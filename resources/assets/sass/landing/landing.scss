@@ -1,0 +1,656 @@
+@import "../mixins";
+@import "../variables";
+@import "jquery.frame-carousel";
+
+.free-ebook {
+  p {
+    font-family: Lato;
+  }
+
+  #slider-container {
+    padding-top: 10px;
+    background: white;
+
+    @include media(">=tablet") {
+      padding-top: 40px;
+    }
+
+
+    .mac-holder {
+      text-align: center;
+
+      .fc-ipad {
+        margin: 0;
+        z-index: 1;
+
+        @include media(">=tablet") {
+          margin-left: -20px;
+        }
+
+
+        @include media(">=desktop") {
+          margin-left: 0;
+        }
+
+
+        .fc-controls {
+          .fc-btn {
+            border: none;
+            opacity: 1;
+
+            &.disabled {
+              background: none !important;
+            }
+
+            &.fc-btn-left {
+              left: 0;
+
+              @include media(">=tablet") {
+                left: 10px;
+              }
+
+
+              &:before {
+                border-color: none !important;
+                border: none;
+                content: "\f104";
+                font-family: FontAwesome;
+                color: #FF009C;
+                width: inherit;
+                left: 3px;
+
+                @include media(">=tablet") {
+                  font-size: 60px;
+                }
+              }
+            }
+
+            &.fc-btn-right {
+              right: 0;
+
+              @include media(">=tablet") {
+                right: 15px;
+              }
+
+
+              &:before {
+                border-color: none !important;
+                border: none;
+                content: "\f105";
+                font-family: FontAwesome;
+                color: #FF009C;
+                left: 10px;
+
+                @include media(">=tablet") {
+                  font-size: 60px;
+                }
+              }
+            }
+          }
+        }
+
+        .fc-pagination {
+          font-size: 25px;
+          text-align: center;
+          top: 67.2%;
+
+          .fc-pagination-inner {
+            a {
+              color: #FF009C;
+
+              &.active, &:focus, &:hover {
+                &:before {
+                  background: #FF009C;
+                }
+              }
+
+              &:before {
+                top: 6px;
+                width: 6px;
+                height: 6px;
+                border-radius: 3px;
+                border: 1px solid #FF009C;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .form-container {
+      text-align: center;
+      background: #F4F4F4;
+      padding-top: 83px;
+      margin-top: -135px;
+
+      @include media(">=tablet") {
+        text-align: left;
+        background: none;
+        padding-left: 40px;
+        margin-top: 0;
+      }
+
+
+      @include media(">=desktop") {
+        padding-left: 0;
+      }
+
+
+      .spinner-main {
+        margin-top: -70px;
+      }
+
+      .alert-success, .alert-danger {
+        font-size: 12px;
+        padding: 10px 25px;
+        width: auto;
+        margin-bottom: 10px;
+        margin-top: 0;
+
+        @include media(">=tablet") {
+          font-size: 12px;
+          margin-top: -10px;
+        }
+      }
+
+      .icon-arrow {
+        position: absolute;
+        color: #EFEFEF;
+        display: none;
+
+        @include media(">=tablet") {
+          font-size: 80px;
+          right: -8px;
+          top: 100px;
+          display: block;
+        }
+
+
+        @include media(">=desktop") {
+          font-size: 100px;
+          right: 0px;
+          top: 100px;
+        }
+
+
+        @include media(">=widescreen") {
+          font-size: 100px;
+          right: 50px;
+          top: 110px;
+        }
+      }
+
+      h2 {
+        font-weight: bold;
+        color: #747474;
+        font-size: 24px;
+        margin-top: 0;
+        margin-bottom: 0;
+
+        @include media(">=tablet") {
+          font-size: 25px;
+          margin-bottom: 10px;
+        }
+
+
+        @include media(">=desktop") {
+          margin-bottom: 15px;
+          font-size: 36px;
+        }
+
+
+        @include media(">=widescreen") {
+          font-size: 42px;
+        }
+      }
+
+      p {
+        font-size: 13px;
+        color: #747474;
+        font-weight: 400;
+
+        @include media(">=tablet") {
+          font-size: 12px;
+          margin-bottom: 20px;
+        }
+
+
+        @include media(">=desktop") {
+          margin-bottom: 25px;
+          font-size: 18px;
+          width: 80%;
+        }
+
+
+        &.pink {
+          padding-top: 10px;
+          color: #D153C9;
+          font-size: 15px;
+          font-weight: 400;
+          margin-bottom: 0;
+
+          @include media(">=tablet") {
+            font-size: 18px;
+          }
+
+
+          @include media(">=desktop") {
+            font-size: 21px;
+          }
+        }
+      }
+
+      .form-group {
+        margin-bottom: 10px;
+
+        @include media(">=tablet") {
+          display: inline;
+        }
+
+
+        .form-control {
+          font-family: Lato;
+          padding: 20px 0;
+          padding-left: 15px;
+          width: 80%;
+          margin: 0 auto;
+
+          @include media(">=tablet") {
+            width: 230px;
+            border-radius: 0;
+            margin-left: 15px;
+          }
+
+
+          @include media(">=desktop") {
+            width: 350px;
+            font-size: 16px;
+          }
+
+
+          @include media(">=widescreen") {
+            width: 400px;
+          }
+        }
+      }
+
+      .button {
+        font-family: Bebas;
+        font-size: 20px;
+        font-weight: normal;
+        text-transform: uppercase;
+        background: #FF009C;
+        color: white;
+        padding: 0;
+        padding-top: 6px;
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 10px;
+
+        @include media(">=tablet") {
+          margin-top: 0;
+          width: 100px;
+          font-size: 18px;
+          border-radius: 0;
+          margin-left: -5px;
+          display: inline;
+          padding-top: 9px;
+          padding-bottom: 6px;
+        }
+
+
+        @include media(">=widescreen") {
+          width: 150px;
+        }
+      }
+    }
+  }
+
+  #ebook-info {
+    background: #F4F4F4;
+    padding-bottom: 25px;
+    padding-top: 20px;
+
+    @include media(">=tablet") {
+      padding-top: 100px;
+      margin-top: -120px;
+    }
+
+
+    @include media(">=widescreen") {
+      padding-top: 200px;
+      margin-top: -250px;
+    }
+
+
+    h2 {
+      color: #D153C9;
+      font-size: 21px;
+      text-align: center;
+      font-weight: 400;
+      margin-top: 0;
+      margin-bottom: 10px;
+
+      @include media(">=tablet") {
+        font-size: 25px;
+        margin-top: -60px;
+        text-align: left;
+        padding-left: 60px;
+      }
+
+
+      @include media(">=desktop") {
+        font-size: 28px;
+        padding-left: 80px;
+      }
+
+
+      @include media(">=widescreen") {
+        margin-top: 0;
+        padding-left: 100px;
+      }
+    }
+
+    .icon-text {
+      h2 {
+        color: #484848;
+        font-size: 15px;
+      }
+
+      ul {
+        text-align: center;
+
+        @include media(">=tablet") {
+          text-align: left;
+        }
+
+
+        &:first-child {
+          padding-bottom: 5px;
+        }
+
+        li {
+          vertical-align: middle;
+          text-align: left;
+          padding-right: 0;
+
+          &.icon {
+            i {
+              &:before {
+                font-size: 50px;
+                color: #979797;
+
+                @include media(">=desktop") {
+                  font-size: 60px;
+                }
+
+
+                @include media(">=widescreen") {
+                  font-size: 80px;
+                }
+              }
+            }
+          }
+
+          &.text {
+            h3 {
+              margin-top: 5px;
+              color: #484848;
+              font-size: 15px;
+              margin-bottom: 5px;
+              font-weight: 100;
+
+              @include media(">=tablet") {
+                font-size: 17px;
+              }
+
+
+              @include media(">=desktop") {
+                font-size: 21px;
+                padding-left: 10px;
+              }
+            }
+
+            p {
+              margin-bottom: 0;
+              color: #747474;
+              font-size: 9px;
+
+              @include media(">=tablet") {
+                font-size: 11px;
+              }
+
+
+              @include media(">=desktop") {
+                font-size: 15px;
+                padding-left: 10px;
+              }
+            }
+
+            padding-bottom: 5px;
+          }
+        }
+      }
+    }
+
+    .ebook-feature {
+      @include media(">=tablet") {
+        float: right;
+
+        h2 {
+          margin-left: -6px;
+        }
+      }
+
+
+      @include media(">=widescreen") {
+        margin-top: -150px;
+      }
+    }
+
+    .seven-day-head-start {
+      @include media(">=tablet") {
+        float: left;
+        margin-top: -70px;
+      }
+
+
+      @include media(">=desktop") {
+        margin-top: -60px;
+      }
+
+
+      h3 {
+        color: #D153C9;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 0;
+        margin-top: 0;
+        padding-top: 20px;
+
+        @include media(">=tablet") {
+          font-size: 21px;
+        }
+      }
+
+      p {
+        text-align: center;
+        color: #747474;
+        font-size: 13px;
+
+        @include media(">=tablet") {
+          font-size: 15px;
+        }
+
+
+        @include media(">=desktop") {
+          font-size: 18px;
+        }
+      }
+
+      .button-large {
+        margin-top: 20px;
+        background: #FF009C;
+        text-transform: uppercase;
+        font-size: 28px;
+        font-family: Bebas;
+        color: white;
+        font-weight: normal;
+        padding: 15px 30px 8px 30px;
+
+        @include media(">=tablet") {
+          padding: 20px 60px 10px 60px;
+        }
+      }
+    }
+  }
+
+  #subscription-modal {
+    &.modal {
+      text-align: center;
+      z-index: 9999;
+    }
+
+    .modal-header {
+      padding: 20px 0;
+      font-family: Montserrat;
+      border-bottom: 1px solid #979797;
+
+      .modal-title {
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 18px;
+        color: #484848;
+
+        @include media(">=tablet") {
+          font-size: 28px;
+        }
+      }
+    }
+
+    .modal-body {
+      .alert-success, .alert-danger {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        font-size: 12px;
+        padding: 10px 25px;
+        width: auto;
+        margin-bottom: 10px;
+
+        @include media(">=desktop") {
+          font-size: 15px;
+        }
+      }
+
+      img {
+        @include media(">=tablet") {
+          max-width: 300px;
+          max-height: 300px;
+          margin: 0 auto;
+        }
+      }
+
+      p {
+        text-align: center;
+        color: #747474;
+        font-size: 14px;
+        margin-bottom: 0;
+
+        @include media(">=tablet") {
+          font-size: 16px;
+        }
+      }
+
+      p + p {
+        font-size: 15px;
+        font-weight: 600;
+        margin-bottom: 10px;
+
+        @include media(">=tablet") {
+          font-size: 18px;
+          margin-bottom: 30px;
+        }
+      }
+
+      .form-inline {
+        text-align: center;
+      }
+
+      .form-group {
+        .form-control {
+          font-family: Lato;
+          padding: 20px 0;
+          padding-left: 10px;
+          width: 80%;
+          margin: 0 auto;
+
+          @include media(">=tablet") {
+            width: 300px;
+            border-radius: 0;
+          }
+
+
+          @include media(">=desktop") {
+            font-size: 16px;
+          }
+        }
+      }
+
+      .button {
+        font-family: Bebas;
+        font-size: 22px;
+        font-weight: normal;
+        text-transform: uppercase;
+        width: 80%;
+        margin: 0 auto;
+        background: #FF009C;
+        color: white;
+        padding-bottom: 6px;
+        padding-top: 12px;
+        margin-top: 10px;
+
+        @include media(">=tablet") {
+          margin-top: 0;
+          display: inline;
+          width: 100px;
+          font-size: 18px;
+          border-radius: 0;
+          border-bottom-right-radius: 3px;
+          border-top-right-radius: 3px;
+          margin-left: -5px;
+          padding-top: 9px;
+          padding-bottom: 6px;
+        }
+
+
+        @include media(">=desktop") {
+          width: 150px;
+        }
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      &.modal:before {
+        display: inline-block;
+        vertical-align: middle;
+        content: " ";
+        height: 100%;
+      }
+    }
+
+    .modal-header .close {
+      font-size: 3em;
+      position: absolute;
+      right: 15px;
+      top: 10px;
+    }
+
+    .modal-dialog {
+      display: inline-block;
+      text-align: left;
+      vertical-align: middle;
+    }
+  }
+}

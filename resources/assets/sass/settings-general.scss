@@ -1,0 +1,324 @@
+
+
+/*settings-general.scss*/
+
+.settings {
+  padding-bottom: 100px;
+  overflow: auto;
+
+  //override bootstrap
+  .radio {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 0px;
+  }//.radio
+
+  .mobile-settings-nav {
+    display: none;
+
+    ul {
+      padding: 0;
+      margin: 0;
+      position: fixed;
+      top: 105px;
+    }//ul
+  }//.mobile-settings-nav
+
+  .settings_p {
+    width: 100%;
+    float: left;
+    margin-bottom: 5px;
+  }//.settings_p
+
+  .gen {
+    margin-bottom: -18px;
+  }//.gen
+
+  button {
+    @include border-radius(3px);
+  }//button
+
+  .nav {
+    width: 180px;
+    float: left;
+
+    h2 {
+      font-family: Montserrat, sans-serif;
+      font-size: 30px;
+      font-weight: 900;
+      color: $grey;
+    }//h2
+
+    p {
+      cursor: pointer;
+      border-top: 1px solid $light-grey;
+      font-size: 20px;
+      font-family: BebasBold, sans-serif;
+      font-weight: 400;
+      color: $lightGrey;
+      margin: 0;
+      padding-top: 14px;
+      padding-bottom: 10px;
+      padding-left: 35px;
+      background-size:20px;
+      background-position: left center;
+      background-repeat:no-repeat;
+
+      &.active {
+        color: $grey;
+      }//&.active
+
+      &:hover {
+        color: $shRed;
+      }//&:hover
+    }//p
+  }//.nav
+
+  .pages {
+    width: 65%;
+    float: right;
+    margin-top: 60px;
+
+    .common {
+
+      .ghLine {
+        height: 1px;
+        background-color: $lighterGrey;
+        margin-top: 10px;
+        width: 100%;
+      }//.ghLine
+
+      h2 {
+        margin: 0;
+        font-family: Montserrat, sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+      }//h2
+
+      .row {
+        margin-top: 25px;
+
+        .left {
+          width: 48%;
+        }//.left
+
+        .right {
+          width: 48%;
+          float: right;
+        }//.right
+      }//.row
+
+      .input {
+        font-family: Lato, sans-serif;
+        font-size: 18px;
+        color: $darkGrey;
+        font-weight: 400;
+        padding: 10px;
+        width: 100%;
+      }//.input
+
+      p {
+        margin: 0;
+        display: inline-block;
+        font-family: Helvetica, Arial;
+        font-size: 14px;
+        font-weight: 700;
+        color: black;
+
+        &.light {
+          font-size: 11px;
+          color: $medLightGrey;
+          font-weight: 400;
+        }//&.light
+
+        &.title {
+          font-family: BebasBold, sans-serif;
+          display: block;
+          font-size: 20px;
+          margin-bottom: 20px;
+          margin-top: 40px !important;
+        }//&.title
+
+        &.normal {
+          font-weight: 400;
+        }//&.normal
+
+        &.red {
+          color: $shRed;
+          font-weight: 400;
+        }//&.red
+      }//p
+
+      .buttons {
+        margin-top: 40px;
+        text-align: center;
+
+        button {
+          @include appearance(none);
+          border: none;
+          background-color: black;
+          color: white;
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          border-radius: 5px;
+          padding: 12px 50px;
+          margin: 0 10px;
+          font-family: Montserrat, sans-serif;
+          font-size: 12px;
+          font-weight: 900;
+
+          &.red {
+            background-color: $shRed;
+          }//&.red
+        }//button
+      }//.buttons
+    }//.common
+  }//.pages
+
+  @include media('<=774px') {
+
+    .nav {
+      display: none;
+    }//.nav
+
+    .pages {
+      float: none;
+      margin-left: auto;
+      margin-right: auto;
+      width: 90%;
+
+      h2 {
+        display: none;
+      }//h2
+    }//.pages
+
+    .content {
+      padding: 0;
+    }//.content
+
+    nav.mobile-settings-nav {
+      display: block;
+      width: 100%;
+      margin: auto;
+      position: relative;
+      margin-top: 56px;
+
+      h2 {
+        text-align: center;
+        background-color: whitesmoke;
+        color: $darkGrey;
+        padding: 10px;
+        //background-image: url(http://ec2-54-84-38-150.compute-1.amazonaws.com/images/down_arrow.png);
+        background-position: right 22px center;
+        background-repeat: no-repeat;
+        background-size: 24px;
+        position: fixed;
+        top: 36px;
+        z-index: 1;
+      }//h2
+
+      ul {
+        display:none;
+        margin-top:0;
+        padding: 0;
+        list-style: none;
+
+        width: 100%;
+        background-color: white;
+        z-index:1;
+
+        position: fixed;
+        top: 102px;
+      }//ul
+
+      li {
+        border-bottom: 1px solid whitesmoke;
+        font-weight:900;
+        font-family: 'Montserrat', sans-serif;
+        padding: 0;
+        border-bottom: 1px solid #c0c0c0;
+
+        a {
+          padding-left: 19px;
+          color: #606060;
+          font-family: Bebas;
+          font-size: 20px;
+          font-weight: 800;
+          letter-spacing: 0.06em;
+        }
+
+        &:last-of-type {
+          border-bottom: none;
+        }//&:last-of-type
+
+        &:hover {
+          color: white;
+          background-color: $highlightLi;
+        }//&:hover
+      }//li
+    }//nav
+  }//breakpoint mobile
+}//.settings
+
+#get-subbed {
+  cursor: pointer;
+
+  .desktop {
+    width: 512px;
+    height: 110px;
+    background-color: black;
+    background-image: url('/images/settings-no-vip.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-top: 20px;
+  }//.desktop
+
+  .mobile {
+    width: 350px;
+    height: 290px;
+    background-image: url('/images/settings-no-vip-mobile.png');
+    background-color: black;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-top: 20px;
+    display: none;
+  }//.mobile
+}//#get-subbed
+
+#my_account_p {
+  background-image: url(/images/idcardreg.png);
+
+  &.active {
+    background-image: url(/images/idcardSelect.png);
+  }//&.active
+
+  &:hover {
+    background-image: url(/images/idcardHover.png);
+  }//&:hover
+}//#my_account_p
+
+#my_sub_p {
+  background-image: url(/images/listbullet.png);
+
+  &.active {
+    background-image: url(/images/listbulletSelect.png);
+  }//&:active
+
+  &:hover {
+    background-image: url(/images/listbulletHover.png);
+  }//&:hover
+}//my_sub_p
+
+#logout_p {
+  background-image: url(/images/logoutreg.png);
+
+  &.active {
+    background-image: url(/images/logoutSelect.png);
+  }//&.active
+
+  &:hover {
+    background-image: url(/images/logoutHover.png);
+  }//&:hover
+}//#logout_p

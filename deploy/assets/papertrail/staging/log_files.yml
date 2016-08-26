@@ -1,0 +1,7 @@
+files:
+  - /var/log/nginx/error.log
+  - /var/www/default/shared/logs/*.log
+destination:
+  host: logs3.papertrailapp.com
+  port: 10784
+  protocol: tls

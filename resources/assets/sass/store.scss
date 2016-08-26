@@ -1,0 +1,805 @@
+.store {
+  $color-gender-less: #303030;
+  $color-gender-female: #E53D89;
+  $color-gender-male: #C70A18;
+
+  .full-width {
+    width: 100%;
+  }
+
+  .carousel-wrapper {
+    a {
+      &:active,
+      &:hover,
+      &:focus {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        outline: 0;
+      }
+
+      img {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+
+  .sort {
+    border-bottom: 2px solid #AFAFAF;
+    padding: 15px;
+    padding-bottom: 5px;
+
+    h2 {
+      display: inline;
+      text-align: center;
+      font-size: 18px;
+      text-transform: uppercase;
+
+      @include media(">=tablet") {
+        font-size: 26px;
+      }
+    }
+
+    p {
+      display: inline-block !important;
+      float: right;
+      margin: 0;
+      text-transform: uppercase;
+      color: #cc0000;
+      font-size: 10px;
+
+      @include media(">=tablet") {
+        display: none !important;
+      }
+
+
+      .fa {
+        color: #cc0000;
+        margin-left: 5px;
+      }
+    }
+
+    ul {
+      display: none;
+      float: right;
+      margin: 0;
+      margin-top: 7px;
+      background: #e6e6e6;
+      position: absolute;
+      right: 0;
+      z-index: 9;
+
+      @include media(">=tablet") {
+        position: relative;
+        display: block;
+        background: transparent;
+      }
+
+
+      @include media("<=tablet") {
+        padding: 5px 0;
+      }
+
+
+      li {
+        border-right: 1px solid #AFAFAF;
+        cursor: pointer;
+        text-transform: uppercase;
+        line-height: 1.85;
+
+        &:first-child {
+          color: #AFAFAF;
+          font-size: 15px;
+        }
+
+        &:last-child, &:first-child {
+          border: none;
+        }
+
+        a {
+          display: inline-block;
+          padding: 0 5px;
+          font-size: 10px;
+          color: #282828;
+          position: relative;
+
+          @include media(">=tablet") {
+            font-weight: bold;
+            font-size: 13px;
+          }
+
+
+          &.active {
+            color: #cc0000;
+            background: transparent;
+
+            @include media(">=tablet") {
+              border-bottom: 2px solid #cc0000;
+
+              &:before {
+                font-family: FontAwesome;
+                content: "\f0d7";
+                display: block;
+                font-size: 15px;
+                position: absolute;
+                bottom: -17px;
+                left: 44%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .headBanner {
+    height: 45px;
+
+    .left {
+      float: left;
+      height: 45px;
+      line-height: 45px;
+      margin-left: 10px;
+      font-size: 8px;
+
+      a {
+        text-decoration: none;
+        color: inherit;
+
+        &:hover {
+          color: black;
+        }
+      }
+
+      p {
+        font-size: 12px;
+        color: #666666;
+        font-weight: 300;
+        font-family: 'Helvetica', 'Arial';
+
+        span {
+          font-weight: 700;
+        }
+      }
+    }
+
+    .right {
+      position: relative;
+      float: right;
+      width: 215px;
+      text-align: right;
+      background-color: #999999;
+      cursor: pointer;
+      height: 45px;
+      display: none;
+
+      p {
+        padding-right: 21px;
+        font-family: 'Helvetica', 'Arial';
+        color: #333333;
+        font-weight: 400;
+        line-height: 45px;
+      }
+
+      .arrow {
+        position: absolute;
+        top: 22px;
+        left: 10px;
+        width: 16px;
+        height: 8px;
+        background-color: black;
+        -webkit-clip-path: polygon(0 0, 100% 0, 50% 100%);
+        -moz-clip-path: polygon(0 0, 100% 0, 50% 100%);
+        clip-path: polygon(0 0, 100% 0, 50% 100%);
+      }
+    }
+  }
+
+  .filter-bar {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+
+    @include media("<=600px") {
+      font-size: .65em;
+      font-size: 2.2vw;
+    }
+
+
+    .content {
+      position: relative;
+    }
+
+    .gender-nav {
+      background: #282828;
+      text-align: center;
+      border-bottom: 1px solid #979797;
+
+      @include media("<=600px") {
+        text-align: center;
+      }
+
+
+      .nav-item {
+        display: inline-block;
+        height: 2.8em;
+
+        // width: 170px;
+        padding: 0 12px;
+        appearance: none;
+        color: #fff;
+        font-size: inherit;
+        font-style: inherit;
+        line-height: 3em;
+        cursor: pointer;
+        margin: 0 0.25em;
+        text-align: center;
+        transition: background-color 0.2s;
+        font-weight: 100;
+        font-size: 23px;
+        letter-spacing: .1em;
+        font-family: 'Bebas';
+        margin: 0 20px;
+        padding: 0 50px;
+
+        &.active {
+          height: 2.75em;
+        }
+
+        // @include media("<=600px") {
+        //   width: 30%;
+        // }
+
+        span {
+          font-family: 'Bebas';
+          font-weight: 700;
+          font-size: 23px;
+        }
+
+        @include media("<=tablet") {
+          font-size: 5vw;
+          padding: 0;
+          margin: 0;
+          width: 33.3%;
+          text-align: center;
+        }
+
+
+        &.active {
+          background-color: $color-gender-male;
+          color: lighten($color-gender-male, 60%);
+        }
+      }
+
+      @include media("<=600px") {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+
+  .product-filters {
+    border-radius: 0.25em;
+    padding: 12px;
+    font-family: Montserrat;
+    color: #666666;
+    font-size: 12px;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: text-top;
+    background: #E6E6E6;
+    padding: 0;
+
+    &.gender-female {
+      color: lighten($color-gender-female, 60%);
+
+      .product-flags {
+        border-left-color: lighten($color-gender-female, 8%);
+      }
+    }
+
+    &.gender-male {
+      color: lighten($color-gender-female, 60%);
+
+      .product-flags {
+        border-left-color: lighten($color-gender-male, 8%);
+      }
+    }
+
+    @include media("<=1280px") {
+      border-radius: 0;
+    }
+
+
+    .product-categories,
+    .product-flags {
+      // display: table-cell;
+      display: block;
+
+      // vertical-align: middle;
+      margin: 0 auto;
+      transition: background-color 0.2s;
+      color: #282828;
+      font-family: 'Bebas';
+      font-size: 20px;
+      font-weight: 600;
+      border-bottom: 1px solid #AFAFAF;
+
+      .product-category,
+      .product-flag {
+        font-size: inherit;
+        display: inline-block;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        margin: 0;
+        text-align: left;
+        vertical-align: text-top;
+        border-collapse: collapse;
+        background-color: rgba(255, 255, 255, 0.05);
+        white-space: nowrap;
+        border-right: 1px solid #AFAFAF;
+        border-collapse: collapse;
+
+        // padding: 24px 22px 20px;
+        // Testing paddings:
+        padding: 16px 44px 11px 33px;
+        margin-top: -4px;
+        margin-left: -3px;
+
+        @include media("<=tablet") {
+          padding: 5px 0;
+          width: 24.9%;
+          text-align: center;
+          font-size: 4vw;
+          letter-spacing: .2vw;
+          font-weight: 700;
+          line-height: 1.45;
+          padding-left: 5px;
+          padding-right: 4px;
+          font-size: 3.5vw;
+        }
+
+
+        &:first-child {
+          border-left: 1px solid #AFAFAF;
+
+          @include media("<=tablet") {
+            border-left: none;
+          }
+        }
+
+        &:last-child {
+          @include media("<=tablet") {
+            border-right: none;
+          }
+        }
+
+        &.active, &:hover {
+          background-color: rgba(0, 0, 0, 0.05);
+        }
+
+        &.active {
+          background-color: $color-gender-male;
+          color: lighten($color-gender-male, 60%);
+        }
+
+        &:before {
+          content: '\e92b';
+          font: normal normal normal 14px/1 icomoon;
+          width: 1.28571429em;
+          text-align: center;
+          font-size: 1.33333333em;
+          line-height: .75em;
+          vertical-align: -15%;
+          display: inline-block;
+          text-rendering: auto;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+
+          @include media("<=tablet") {
+            margin-bottom: 5px;
+            margin-top: 10px;
+
+            // Testing display
+            // display: block;
+            display: none;
+            margin: 0 auto 10px;
+          }
+
+
+          // padding-left: 18px;
+       
+        }
+
+        &[data-category^='weight-loss-supplements']:before {
+          content: '\e929';
+        }
+
+        &[data-category^='performance']:before {
+          content: '\e92c';
+        }
+
+        &[data-category='meal-plan']:before {
+          content: '\e92b';
+        }
+
+        &[data-category^='accessories']:before {
+          content: '\e928';
+        }
+      }
+    }
+
+    .product-flags {
+      border-left: 1px solid;
+      padding-left: 0.5em;
+      margin-left: 0.5em;
+      display: table-cell;
+      width: 15%;
+    }
+  }
+
+  #product-grid {
+    color: #595959;
+    margin-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: .1vw;
+    margin-top: 40px;
+    max-width: 1280px;
+    text-align: center;
+    padding-bottom: 6px;
+
+    @include media("<=tablet") {
+      margin-top: 0;
+    }
+
+
+    .spinner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 216px;
+      height: 216px;
+      right: 0;
+      bottom: 0;
+      margin: auto auto;
+    }
+
+    .item-product {
+      cursor: pointer;
+      margin-bottom: 10px;
+
+      &:hover {
+        box-shadow: 0 0 1px 1px #ccc;
+      }
+
+      &.product-male {
+        &:hover {
+          color: $male;
+        }
+      }
+
+      &.product-female {
+        &:hover {
+          color: $female;
+        }
+      }
+
+      @include media("<=phone") {
+        height: 250px;
+      }
+
+
+      @include media("<=tablet") {
+        height: auto;
+        border: 1px solid #f3f3f3;
+        margin: 0;
+        border-collapse: collapse;
+        padding-top: 10px;
+        display: inline-block;
+        float: none;
+      }
+
+
+      @include media(">tablet") {
+        height: 460px;
+        margin-bottom: 40px;
+        padding: 10px;
+      }
+
+
+      @include media(">=desktop") {
+        height: 370px;
+        margin-bottom: 10px;
+        padding: 10px;
+      }
+
+
+      @include media(">=widescreen") {
+        height: 390px;
+        margin-bottom: 30px;
+        padding: 10px;
+      }
+
+
+      .gender-female,
+      .gender-male,
+      .gender-unisex {
+        height: auto;
+      }
+
+      @include media(">desktop", "<widescreen") {
+        padding: 0;
+
+        .item_anchor {
+          padding: 10px 25px 0;
+        }
+
+        h3 {
+          margin-top: 5px;
+        }
+      }
+    }
+
+    /* Classes for discounted badge/banner */
+
+    .discount-container {
+      box-sizing: border-box;
+      position: absolute;
+      top: 20%;
+      left: 4%;
+
+      .icon-discount {
+        &:before {
+          font-family: icomoon;
+          font-weight: 400;
+          text-transform: none;
+          line-height: 1;
+          color: #fcff00;
+          text-shadow: -1px 3px 2px rgba(0, 0, 0, 0.6);
+          font-size: 13vw;
+
+          @include media(">=mobile") {
+            font-size: 64px;
+            font-size: 10vw;
+          }
+
+
+          @include media(">=tablet") {
+            font-size: 64px;
+          }
+
+
+          @include media(">=desktop") {
+            font-size: 70px;
+          }
+        }
+      }
+
+      .discount {
+        text-align: left;
+        color: #191919;
+        top: 20%;
+        left: 8%;
+
+        // padding: 15%;
+        font-family: 'Bebas Neueu', 'Open Sans Condensed', sans-serif;
+        font-weight: 700;
+
+        // height: 100%;
+        letter-spacing: -.04em;
+        position: absolute;
+        box-sizing: border-box;
+        width: 100%;
+        line-height: 1.3em;
+        transform: rotate(-15deg);
+        font-size: 6vw;
+
+        @include media(">=mobile") {
+          font-size: 4.5vw;
+        }
+
+
+        @include media(">=tablet") {
+          font-size: 32px;
+        }
+
+
+        @include media(">=desktop") {
+          font-size: 35px;
+        }
+
+
+        &:before {
+          position: absolute;
+          box-sizing: border-box;
+          text-align: right;
+          letter-spacing: normal;
+          content: '%';
+          font-size: .5em;
+          right: 30%;
+          bottom: 0.2em;
+
+          @include media(">=tablet") {
+            font-size: 14px;
+          }
+
+
+          @include media(">=desktop") {
+            font-size: 16px;
+          }
+        }
+
+        &:after {
+          position: absolute;
+          box-sizing: border-box;
+          text-align: right;
+          letter-spacing: normal;
+          content: 'OFF';
+          font-size: .3em;
+          right: 30%;
+          top: 1em;
+
+          @include media(">=tablet") {
+            font-size: 9px;
+            right: 25%;
+          }
+
+
+          @include media(">=desktop") {
+            font-size: 10px;
+          }
+        }
+      }
+    }
+
+    /* discount badge ends here */
+
+    .item_anchor {
+      border: 0;
+      display: block;
+      text-decoration: none;
+      color: white;
+      padding: 10px 15px 0;
+    }
+
+    .gender-female {
+      &:hover {
+        color: $female;
+        cursor: pointer;
+      }
+    }
+
+    .gender-male,
+    .gender-unisex {
+      &:hover {
+        color: $male;
+        cursor: pointer;
+
+        // font-family: Lato, sans-serif;
+     
+      }
+    }
+
+    @include media("<desktop") {
+      &.section-margin {
+        margin-top: 50px;
+      }
+    }
+
+
+    @include media(">desktop") {
+      &.section-margin {
+        margin-top: 80px;
+      }
+    }
+
+
+    .gender-female, .gender-male, .gender-unisex {
+      height: 40px;
+
+      @include media("<tablet") {
+        height: 72px;
+      }
+
+
+      @include font(16px, 1.15, 600);
+
+      margin-bottom: 5px;
+
+      h3,
+      h4 {
+        @include media("<tablet") {
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          width: 100%;
+          overflow: hidden;
+        }
+      }
+
+      h3 {
+        margin: 15px 0 0;
+
+        @include media("<tablet") {
+          @include font(16px, 1.15, 600);
+
+          font-size: 3.2vw;
+        }
+
+
+        @include media(">tablet") {
+          @include font(16px, 1.15, 600);
+        }
+
+
+        @include media(">desktop") {
+          @include font(17px, 1.15, 600);
+        }
+
+
+        @include media(">widescreen") {
+          @include font(18px, 1.15, 600);
+        }
+      }
+
+      h4 {
+        margin: 3px 0 0 0;
+        font-size: 15px;
+
+        @include media("<tablet") {
+          font-size: 2.3vw;
+        }
+      }
+    }
+
+    .product-size {
+      min-height: 200px;
+    }
+
+    .msrp {
+      @include font(15px, 20px);
+
+      color: #696969;
+
+      @include media(">tablet") {
+        @include font(16px, 20px);
+      }
+
+
+      @include media(">desktop") {
+        @include font(22px, 30px);
+      }
+    }
+
+    .base-price {
+      @include font(18px, 20px);
+
+      margin-left: 5px;
+
+      @include media(">tablet") {
+        @include font(20px, 20px);
+      }
+
+
+      @include media(">desktop") {
+        @include font(24px, 30px);
+      }
+
+
+      @include media(">widescreen") {
+        @include font(28px, 30px);
+      }
+    }
+  }
+}
+
+.mobile-fluid {
+  padding: 0;
+
+  @include media(">=tablet") {
+    margin-top: 20px;
+  }
+}

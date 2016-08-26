@@ -1,0 +1,110 @@
+/* VARIABLES */
+$small-font-size: 26px;
+$medium-font-size: 38px;
+$large-font-size: 60px;
+.large-font{
+	font-size: $large-font-size;
+	font-weight: bold;
+	color: #333;
+}
+
+.social-single {
+    overflow: hidden;
+    -webkit-transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    -moz-transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    transition: background 1.3s, color 1.3s, box-shadow 1.3s;
+    text-decoration: none;
+}
+
+#ambassador-holder{
+	margin-top: 30px;
+	color: #777;
+	.inside-section-margin{
+		margin-top: 10px;
+	}
+	.section-padding{
+		padding-top: 50px;
+	}
+	.member-area{
+		background: #fcfcfc;
+		@include media("<=tablet"){
+			min-height: 530px;
+		}
+		@include media(">tablet", "<desktop"){
+			min-height: 560px;
+		}
+		@include media(">=desktop", "<widescreen"){
+			min-height: 530px;
+		}
+		@include media(">=widescreen"){
+			min-height: 500px;
+		}
+		border-bottom: 10px solid $shredz-primary;
+	}
+	.member-photo{
+		margin-top: -20%;
+		img {
+			border: 3px solid white;
+			border-radius: 50%;
+		    -webkit-transition: all 1s ease; /* Safari and Chrome */
+		    -moz-transition: all 1s ease; /* Firefox */
+		    -ms-transition: all 1s ease; /* IE 9 */
+		    -o-transition: all 1s ease; /* Opera */
+		    transition: all 1s ease;
+		    &:hover{
+		    	border: none;
+			    -webkit-transform:scale(1.25); /* Safari and Chrome */
+			    -moz-transform:scale(1.25); /* Firefox */
+			    -ms-transform:scale(1.25); /* IE 9 */
+			    -o-transform:scale(1.25); /* Opera */
+			     transform:scale(1.25);
+			}
+		}
+	}
+	.member-body{
+		padding: 20px;
+	}
+	.fa-inverse{
+		color: $white;
+		text-decoration: none;
+	}
+	.fa-circle.instagram{
+		color: #3f729b;
+	}
+	.fa-circle.facebook{
+		color: #3b5998;
+	}
+	.fa-circle.twitter{
+		color: #55acee;
+	}
+}
+
+@media screen and (max-width: 1068px){
+	#ambassador-holder{
+		.member-area{
+			// min-height: $bp-mobile;
+		}
+		.member-body{
+			p{
+				font-size: 13px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 767px){
+	.large-font{
+		font-size: $medium-font-size;
+	}
+	#ambassador-holder{
+		margin-top: 10px;
+		.member-area{
+			min-height: auto !important;
+		}
+		.member-body{
+			p{
+				font-size: 12px;
+			}
+		}
+	}
+}

@@ -1,0 +1,22 @@
+
+/*paypal-success.scss*/
+
+.processing-block {
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  cursor: help;
+  position: absolute;
+  background-color: transparent;
+}//.processing-block
+
+.paypal-success {
+  padding-top: 90px;
+  text-align: center;
+
+  h1 {
+    //display: inline-block;
+    margin-top: 20px;
+    vertical-align: middle;
+  }//h1
+}//.paypal-success

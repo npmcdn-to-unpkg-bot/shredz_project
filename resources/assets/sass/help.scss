@@ -1,0 +1,526 @@
+
+
+
+#help_header {
+  height: 540px;
+  background-image: url(/images/getHelp.jpg);
+  background-size: cover;
+}
+
+.help h1, #help_header h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 79px;
+  font-weight: 900;
+  color: $male;
+  text-align: center;
+  margin: 0;
+  height: 100%;
+  vertical-align: middle;
+  line-height: 448px;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+
+.help {
+  padding: 0;
+  .search {
+    margin-top: 40px;
+    button {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      border: none;
+      float: right;
+      padding: 0 15px;
+      height: 52px;
+      background-color: black;
+      color: white;
+      font-size: 15px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+    }
+    .input_wrapper {
+      overflow: hidden;
+      display: block;
+      input {
+        width: 100%;
+        font-family: 'Lato', sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        color: #1c1c1c;
+        padding: 14px;
+        background-color: $light-grey;
+        border: none;
+        height: 51px;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+      }
+    }
+  }
+  h2 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 900;
+  }
+  .faqButtons {
+    overflow: auto;
+    text-align: center;
+    .left {
+      float: left;
+      width: 100%;
+    }
+    .right {
+      float: right;
+      width: 49%;
+    }
+    button {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      border: none;
+      width: 23%;
+      text-align: center;
+      background-color: #202020;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      height: 120px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 17px;
+      font-weight: 900;
+      color: white;
+      margin-left: 5px;
+      padding-top: 65px;
+      line-height: 24px;
+      vertical-align: top;
+      display: inline-block;
+
+      .odd {
+        margin-left: 0;
+      }
+      .even {
+        float: right;
+      }
+    }
+  }
+}
+
+.h_button {
+  background-position: center 34px;
+  background-repeat: no-repeat;
+}
+
+.faq_dropdown {
+  padding-left: 40px;
+  padding-right: 40px;
+}//.faq_dropdown
+
+#help_shipping {
+  background-size: 40px;
+  background-image: url(/images/shipping.png);
+}
+
+#help_dosage {
+  background-size: 20px;
+  background-image: url(/images/dosage.png);
+}
+
+#help_returns {
+  background-size: 30px;
+  background-image: url(/images/returns.png);
+}
+
+#help_support {
+  background-size: 40px;
+  background-image: url(/images/support.png);
+}
+
+.help {
+  .faqButtons {
+    button {
+      &:nth-child(2) {}
+      &:hover {
+        background-color: #303030;
+      }
+    }
+    .active {
+      background-color: $male;
+    }
+  }
+  #faqLinks .link {
+    display: block;
+    .arrow {
+      background-color: $male;
+      display: inline-block;
+      -webkit-clip-path: polygon(100% 50%, 0% 100%, 25% 50%, 0% 0%);
+      -moz-clip-path: polygon(100% 50%, 0% 100%, 25% 50%, 0% 0%);
+      clip-path: polygon(100% 50%, 0% 100%, 25% 50%, 0% 0%);
+      height: 12px;
+      width: 15px;
+      margin-right: 7px;
+    }
+    p {
+      display: inline-block;
+      font-family: 'Helvetica', 'Arial';
+      font-size: 14px;
+      color: $male;
+      margin: 0;
+      margin-top: 20px;
+      &:nth-child(1) {
+        margin-top: 40px;
+      }
+    }
+  }
+  .track {
+    h2 {
+      margin: 10px 0;
+      color: black;
+      margin: 10px 0;
+      font-weight: 300;
+    }
+    input {
+      width: 100%;
+      font-family: 'Lato', sans-serif;
+      padding-left: 10px;
+      font-weight: 400;
+      color: #1c1c1c;
+      height: 45px;
+      font-size: 13px;
+      border: 1px solid #c0c0c0;
+      margin: 10px 0;
+      border-radius: 3px;
+    }
+  }
+}
+
+#help_social_icons {
+  float: left;
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+  img {
+    width: 50px;
+    float: left;
+    margin-right: 20px;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.help .track button {
+  padding: 0 15px;
+  border-radius: 3px;
+  height: 50px;
+  width: 284px;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+
+  margin-top: 12px;
+  margin-bottom: 15px;
+  font-size: 31px;
+
+  &:hover {color: white;}
+
+  &.dark-grey-btn {
+    background-color: #1a1a1a;
+
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+.cus {
+  margin-top: 60px;
+  padding-bottom: 60px;
+}
+
+#outer_cus {
+  position: relative;
+  float: left;
+  width: 100%;
+  padding: 0 15px;
+}
+
+#inner_cus {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  max-width: 1280px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#typ {
+  border-top: 1px solid #c0c0c0;
+  padding-top: 40px;
+}
+
+#help_fname {
+  width: 49%;
+}
+
+#help_email {
+  width: 49%;
+  float: right;
+}
+
+.help .cus {
+  overflow: auto;
+  .left {
+    float: left;
+    width: 45%;
+    p {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 15px;
+      font-weight: 900;
+      color: #1c1c1c;
+      text-align: left;
+    }
+    form {
+      input {
+        width: 100%;
+        font-family: 'Lato', sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        color: #1c1c1c;
+
+        background-color: white;
+        border: none;
+        margin: 5px 0;
+        border-radius: 3px;
+        height: 45px;
+        padding-left: 10px;
+        border: 1px solid #c0c0c0;
+        font-size: 13px;
+      }
+      textarea {
+        width: 100%;
+        font-family: 'Lato', sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        color: #1c1c1c;
+
+        background-color: white;
+        border: none;
+        margin: 5px 0;
+        border-radius: 3px;
+        height: 45px;
+        padding-left: 10px;
+        border: 1px solid #c0c0c0;
+        font-size: 13px;
+        max-width: 100%;
+        height: 180px;
+        resize: none;
+        border-radius: 3px;
+      }
+      button {
+        border-radius: 3px;
+        padding: 0 15px;
+        height: 50px;
+        background-color: black;
+        color: white;
+        font-size: 15px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border: none;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 900;
+        width: 100%;
+        margin-top: 5px;
+        &:hover {
+          background-color: #303030;
+        }
+      }
+    }
+  }
+  .right {
+    float: right;
+    width: 45%;
+    p {
+      font-family: 'Helvetica', 'Arial';
+      font-size: 14px;
+      font-weight: 300;
+    }
+    .phone {
+      color: $male;
+    }
+    img {
+      width: 100%;
+      margin-top: 20px;
+    }
+    .group {
+      margin-top: 32px;
+      p {
+        margin: 2px 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 774px) {
+  .help {
+    padding-left: 20px;
+    padding-right: 20px;
+    .faqButtons {
+      .left {
+        float: none;
+        width: auto;
+        text-align: center;
+      }
+      .right {
+        float: none;
+        width: auto;
+        margin-top: 10px;
+      }
+      button {
+        display: inline-block;
+        width: 48%;
+        margin-bottom: 5px;
+      }
+    }
+    .cus {
+      .left {
+        width: 100%;
+        float: none;
+      }
+      .right {
+        width: 100%;
+        float: none;
+        text-align: center;
+      }
+    }
+  }
+
+}
+
+@media (max-width: 775px) {
+  #help_social_icons {
+    text-align: center;
+    img {
+      display: inline-block;
+      float: none;
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #help_header {
+    height: 250px;
+    h1 {
+      font-size: 40px;
+      line-height: 250px;
+    }
+  }
+}
+
+.help {
+
+  .ghLine {
+    height: 1px;
+    background-color: #c0c0c0;
+    margin-top: 60px;
+  }//.ghLine
+
+  .track {
+    margin-top: 60px;
+    overflow: auto;
+    padding-bottom: 60px;
+
+    ._row {
+      overflow: auto;
+      margin-top: 40px;
+
+      &:first-of-type {
+        margin-top: 0;
+      }//&:first-of-type
+    }//._row
+
+    #typ {
+      border: none;
+      margin: 0;
+      padding: 0;
+      //  float: left;
+    }//#typ
+
+    #login_to_track {
+      //  float: right;
+      height: 65px;
+      margin-top: 40px;
+    }//#login_to_track
+
+    #ttyp {
+      clear: both;
+      //  float: left;
+    }//#ttyp
+
+    #sign_up_now {
+      //  float: right;
+      height: 65px;
+      margin-top: 40px;
+      margin-bottom: 0;
+    }//#sign_up_now
+
+    @include media('<=900px') {
+
+      #typ {
+        float: none;
+      }//#typ
+
+      #login_to_track {
+        float: none;
+        //margin-top: 20px;
+      }//#login_to_track
+
+      #ttyp {
+        float: none;
+      }//#ttyp
+
+      #sign_up_now {
+        float: none;
+        //margin-top: 20px;
+      }//#sign_up_now
+    }//breakpoint
+  }//.track
+
+  .cus-wrapper {
+    background-color: whitesmoke;
+    overflow: auto;
+  }//.cus-wrapper
+
+  #faqLinks {
+    margin-top: 50px;
+
+    h2 {
+      text-align: left;
+      font-family: Montserrat, sans-serif;
+      color: #1a1a1a;
+      font-size: 24px;
+      font-weight: 500;
+    }//h2
+
+    p {
+      font-family: Helvetica, Arial;
+      font-size: 14px;
+      font-weight: 300;
+    }//p
+  }//#faqLinks
+}//.help

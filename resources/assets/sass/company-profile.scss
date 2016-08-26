@@ -1,0 +1,135 @@
+
+
+/*company-profile.scss*/
+
+.company-profile {
+  padding-bottom: 65px;
+
+  h1, h2, p {
+    margin: 0;
+  }//h1, h2, p
+
+  h2 {
+    font-size: 30px;
+    text-align: center;
+    color: $darkGrey;
+  }//h2
+
+  p {
+    font-size: 16px;
+    font-weight: 300;
+    font-family: Helvetica;
+  }//p
+
+  .wrapper {
+    padding: 0 20px;
+    max-width: 1280px;
+    margin: auto;
+  }//.wrapper
+
+  .profile-container {
+    padding-top: 58px;
+    padding-bottom: 41px;
+    background-image: url('/images/cp-profile.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    h1 {
+      font-size: 42px;
+      color: white;
+      font-family: Montserrat;
+      font-weight: 700;
+      text-align: center;
+    }//h1
+
+    p {
+      color: white;
+      font-size: 16px;
+      font-family: Helvetica;
+      font-weight: 300;
+      text-align: center;
+      margin-top: 24px;
+    }//p
+  }//.profile-container
+
+  .timeline {
+    padding-top: 32px;
+
+    .graphic {
+      height: 220px;
+      width: 100%;
+      outline: 1px solid;
+      margin-top: 30px;
+    }//.graphic
+  }//.timeline
+
+  .text-group {
+    margin-top: 40px;
+
+    p {
+      margin-top: 25px;
+
+      &.join {
+        color: $shRed;
+        text-align: center;
+        font-weight: 700;
+        margin-top: 30px;
+      }//&.join
+    }//p
+  }//.text-group
+
+  @include media('>=900px') {
+
+    .profile-container {
+      padding-top: 192px;
+      padding-bottom: 163px;
+
+      h1 {
+        font-size: 62px;
+      }//h1
+
+      p {
+        display: none;
+      }//p
+    }//.profile-container
+
+    .timeline {
+
+      h2 {
+        text-align: left;
+      }//h2
+
+      .graphic {
+        margin-top: 15px;
+        height: 250px;
+      }//.graphic
+    }//.timeline
+
+    .two {
+      overflow: auto;
+
+      .left {
+        float: left;
+      }//.left
+
+      .right {
+        float: right;
+      }//.right
+
+      .text-group {
+        width: 45%;
+      }//.text-group
+    }//.two
+
+    .text-group {
+
+      p {
+
+        &.join {
+          margin-top: 8px;
+        }//&.join
+      }//p
+    }//.text-group
+  }//breakpoint desktop
+}//.company-profile

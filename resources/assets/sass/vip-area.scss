@@ -1,0 +1,876 @@
+/* NEW VIP AREA */
+.vip-signup {
+  /* VARIABLES FOR REVIEW PAGE */
+  $review-page-primary-color: #333333;
+  $review-page-secondary-color: #727272;
+  $extra-small-font-size: 12px;
+  $small-font-size: 26px;
+  $medium-font-size: 38px;
+  $large-font-size: 50px;
+  $extra-large-font-size: 62px;
+
+  body {
+    font-family: Montserrat, sans-serif;
+  }
+
+  .font-bold {
+    font-weight: bold;
+  }
+
+  .font-regular {
+    font-weight: normal;
+  }
+
+  .black-font {
+    color: black;
+  }
+
+  .large-font {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .extra-large-font {
+    font-size: $extra-large-font-size;
+    font-weight: bold;
+  }
+
+  .section-margin {
+    margin-top: 60px;
+  }
+
+  .inside-section-margin {
+    margin-top: 20px;
+  }
+
+  .padding-left {
+    padding-left: 5px;
+
+    @include media(">=tablet") {
+      padding-left: 15px;
+    }
+  }
+
+  .padding-right {
+    padding-right: 5px;
+
+    @include media(">=tablet") {
+      padding-right: 15px;
+    }
+  }
+
+  .large-button {
+    font-family: Bebas;
+    font-size: 28px;
+    border-radius: 3px;
+    color: white;
+    padding: 10px 30px;
+
+    @include media(">=tablet") {
+      font-size: 30px;
+      padding: 10px 36px;
+    }
+
+
+    @include media(">=desktop") {
+      font-size: 36px;
+    }
+  }
+
+  .play-button {
+    position: absolute;
+    top: 35%;
+    left: 38%;
+
+    .icon {
+      font-size: 11vw;
+      opacity: 0.8;
+      color: $shredz-primary;
+
+      @include media(">=tablet") {
+        font-size: 60px;
+      }
+
+
+      @include media(">=desktop") {
+        font-size: 80px;
+      }
+    }
+
+    img {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      max-width: 80px;
+
+      @include media(">=mobile") {
+        max-width: 100px;
+      }
+
+
+      @include media(">=tablet") {
+        max-width: 80px;
+      }
+
+
+      @include media(">=desktop") {
+        max-width: 100px;
+      }
+
+
+      @include media(">=widescreen") {
+        max-width: 150px;
+      }
+    }
+  }
+
+  .accessible {
+    position: relative;
+    border: 4px solid #cc0000;
+  }
+
+  #banner {
+    .cover-image {
+      background: url(../images/fitclub/pattern.jpg) center center no-repeat;
+      background-size: cover;
+      padding: 30px;
+
+      @include media(">=tablet") {
+        padding: 0;
+        height: 400px;
+      }
+
+
+      @include media(">=desktop") {
+        height: 600px;
+      }
+
+
+      .logo {
+        img {
+          max-height: 200px;
+          margin: 0 auto;
+
+          @include media(">=tablet") {
+            margin-top: 60px;
+          }
+
+
+          @include media(">=desktop") {
+            max-height: 300px;
+            margin-top: 90px;
+          }
+        }
+
+        .large-button {
+          background: none;
+          border: 1px solid white;
+        }
+      }
+
+      .male {
+        img {
+          @include media(">=tablet") {
+            margin-top: 50px;
+            max-height: 375px;
+          }
+
+
+          @include media(">=desktop") {
+            margin-top: 140px;
+            max-height: 500px;
+          }
+        }
+      }
+
+      .female {
+        img {
+          @include media(">=tablet") {
+            margin-top: 25px;
+            max-height: 400px;
+          }
+
+
+          @include media(">=desktop") {
+            margin-top: 50px;
+            max-height: 600px;
+          }
+        }
+      }
+    }
+
+    .icon-text {
+      background: #e6e6e6;
+      padding: 20px 0;
+
+      @include media(">=tablet") {
+        padding: 30px 0;
+      }
+
+
+      ul {
+        text-align: center;
+        margin: 0;
+
+        li {
+          border-right: 1px solid #afafaf;
+          margin-right: 5px;
+          padding-right: 5px;
+          margin-top: 10px;
+          margin-bottom: 10px;
+
+          &:last-child {
+            padding-right: 0;
+            margin-right: 0;
+            border: none;
+          }
+
+          width: 30%;
+
+          @include media(">=tablet") {
+            width: auto;
+            margin-right: 10px;
+            padding-right: 10px;
+            margin-right: 40px;
+            padding-right: 40px;
+          }
+
+
+          .icon {
+            color: #cc0000;
+            font-size: 40px;
+
+            @include media(">=tablet") {
+              font-size: 60px;
+            }
+          }
+
+          p {
+            color: #484848;
+            font-size: 12px;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            font-weight: bold;
+
+            @include media(">tablet") {
+              margin-top: 15px;
+              font-size: 21px;
+            }
+
+
+            &:last-child {
+              font-size: 9px;
+              margin-top: 0;
+              color: #959595;
+
+              @include media(">=tablet") {
+                font-size: 18px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .world {
+      position: relative;
+
+      // margin-top: 20px;
+
+      // @include media(">=tablet") {
+      //   margin-top: 30px;
+      // }
+
+      // @include media(">=desktop") {
+      //   margin-top: 60px;
+      // }
+
+      img {
+        width: 100%;
+        min-height: 90px;
+
+        @include media(">=tablet") {
+          min-height: 120px;
+        }
+
+
+        @include media(">=tablet") {
+          height: 140px;
+        }
+      }
+
+      .text {
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        text-align: center;
+        width: 100%;
+        top: 20px;
+
+        @include media(">=tablet") {
+          top: 30px;
+        }
+
+
+        @include media(">=desktop") {
+          top: 40px;
+        }
+
+
+        h1 {
+          margin: 0;
+          color: white;
+          text-transform: uppercase;
+          font-weight: bold;
+          font-size: 26px;
+
+          @include media(">=tablet") {
+            font-size: 36px;
+          }
+        }
+
+        h4 {
+          margin: 0;
+          text-transform: uppercase;
+          color: white;
+          font-size: 18px;
+          font-family: Montserrat;
+          font-weight: 100;
+
+          @include media(">=tablet") {
+            font-size: 22px;
+          }
+        }
+      }
+    }
+
+    .fitness-for-everyone {
+      margin-top: 20px;
+      border-bottom: 1px solid #afafaf;
+      padding-bottom: 30px;
+
+      @include media(">=tablet") {
+        padding-bottom: 60px;
+        padding-top: 30px;
+      }
+
+
+      img {
+        margin: 0 auto;
+        max-height: 400px;
+      }
+
+      h1 {
+        text-transform: uppercase;
+        color: #484848;
+        font-size: 22px;
+        margin-top: 0px;
+        font-weight: 600;
+
+        @include media(">=tablet") {
+          font-size: 36px;
+          margin-bottom: 20px;
+        }
+      }
+
+      p {
+        font-family: Montserrat;
+        color: #747474;
+        margin-bottom: 0;
+        font-size: 14px;
+        font-weight: 100;
+
+        @include media(">=tablet") {
+          font-size: 16px;
+          line-height: 1.5;
+        }
+      }
+
+      .large-button {
+        margin-top: 40px;
+        background: #cc0000;
+      }
+    }
+  }
+
+  .paragraph-text {
+    font-size: 12px;
+    line-height: 1.5;
+
+    @include media(">=mobile") {
+      font-size: 14px;
+    }
+
+
+    @include media(">=desktop") {
+      font-size: 16px;
+    }
+  }
+
+  @include media(">=tablet") {
+    .gutter-desktop {
+      padding-left: 15px !important;
+      padding-right: 15px !important;
+    }
+  }
+
+
+  // .box-style {
+  //   @include media(">=tablet") {
+  //     height: 210px;
+  //   }
+
+  //   @include media(">=desktop") {
+  //     height: 190px;
+  //   }
+
+  //   border: 2px solid #e0e0e0;
+
+  //   &:hover {
+  //     color: $white;
+  //   }
+
+  //   &.active {
+  //     background-color: $shredz-primary;
+
+  //     h4, h5 {
+  //       color: white;
+  //     }
+
+  //     .icons-style {
+  //       color: white;
+  //     }
+  //   }
+
+  //   h4 {
+  //     color: #272727;
+  //     font-size: 11px;
+
+  //     @include media(">=mobile") {
+  //       font-size: 14px;
+  //     }
+
+  //     @include media(">=tablet") {
+  //       font-size: 16px;
+  //     }
+
+  //     @include media(">=desktop") {
+  //       font-size: 18px;
+  //     }
+
+  //     @include media(">=widescreen") {
+  //       font-size: 20px;
+  //     }
+  //   }
+
+  //   h5 {
+  //     font-size: 11px;
+
+  //     @include media(">=mobile") {
+  //       font-size: 12px;
+  //     }
+
+  //     @include media(">=tablet") {
+  //       font-size: 14px;
+  //     }
+  //   }
+
+  //   .icons-style {
+  //     font-size: 50px;
+  //     color: #f5cccc;
+
+  //     @include media(">=tablet") {
+  //       font-size: 100px;
+  //     }
+  //   }
+
+  //   .icons-big {
+  //     .icons-style {
+  //       @include media(">=tablet") {
+  //         font-size: 130px;
+  //       }
+  //     }
+
+  //     @include media(">=tablet") {
+  //       margin-top: -12px;
+  //       margin-bottom: -18px;
+  //     }
+  //   }
+
+  //   &:hover {
+  //     background-color: $shredz-primary;
+
+  //     h4 {
+  //       color: white;
+  //     }
+
+  //     .icons-style {
+  //       color: white;
+  //     }
+  //   }
+
+  //   &:active {
+  //     background-color: $shredz-primary;
+  //   }
+  // }
+
+  .signup-container-style {
+    padding-top: 15px;
+
+    @include media(">=tablet") {
+      border-right: 1px solid #999999;
+      border-left: 1px solid #999999;
+    }
+
+
+    border-bottom: 1px solid #999999;
+  }
+
+  .white-background {
+    background-color: white;
+    padding: 0px;
+    margin-bottom: 10px;
+
+    @include media(">=tablet") {
+      padding: 20px;
+    }
+  }
+
+  // .signup-button, .signup-post {
+  //   background-color: $shredz-primary;
+
+  //   @include appearance(none);
+
+  //   @include border-radius(3px);
+
+  //   border: none;
+  //   color: white;
+  //   font-family: Montserrat, sans-serif;
+  //   font-size: 18px;
+  //   font-weight: 600;
+
+  //   @include padding(8px 30px);
+
+  //   margin-top: 20px;
+  //   margin-bottom: 20px;
+
+  //   @include media(">=tablet") {
+  //     font-size: 20px;
+  //     padding: 16px 30px;
+  //   }
+  // }
+
+  // .big-button {
+  //   width: 50%;
+  // }
+
+  #button-bottom {
+    margin-bottom: 40px;
+  }
+
+  .quote-icon-style {
+    color: #e0e0e0;
+    font-size: 26px;
+
+    @include media(">=mobile") {
+      font-size: 30px;
+    }
+
+
+    @include media(">=tablet") {
+      font-size: 36px;
+    }
+
+
+    @include media(">=desktop") {
+      font-size: 50px;
+    }
+  }
+
+  .text-inside-quote {
+    font-size: 26px;
+
+    @include media(">=mobile") {
+      font-size: 30px;
+    }
+
+
+    @include media(">=tablet") {
+      font-size: 36px;
+    }
+
+
+    @include media(">=desktop") {
+      font-size: 46px;
+    }
+  }
+
+  .tab-pane {
+    h2 {
+      font-size: 22px;
+      font-weight: 600;
+
+      @include media(">=mobile") {
+        font-size: 24px;
+      }
+
+
+      @include media(">=tablet") {
+        text-align: left;
+        font-size: 26px;
+      }
+    }
+  }
+
+  #preview-videos {
+    .col-flex {
+      &.legs {
+        @include media("<tablet") {
+          width: 49.7%;
+        }
+      }
+    }
+
+    h1 {
+      font-size: 26px;
+      font-weight: 600;
+
+      @include media(">=tablet") {
+        font-size: 32px;
+        margin-top: 0;
+      }
+
+
+      @include media(">=desktop") {
+        font-size: 38px;
+      }
+    }
+
+    h2 {
+      font-size: 22px;
+      font-weight: 600;
+      margin-top: 10px;
+
+      @include media(">=tablet") {
+        font-size: 24px;
+
+        @include margin(25px null 35px null);
+      }
+
+
+      @include media(">=desktop") {
+        font-size: 26px;
+      }
+    }
+
+    p {
+      font-size: 14px;
+      font-family: Montserrat;
+      color: #747474;
+      font-weight: normal;
+      margin-bottom: 20px;
+
+      @include media(">=tablet") {
+        font-size: 18px;
+        margin-bottom: 30px;
+      }
+    }
+
+    .large-button {
+      background-color: #cc0000;
+      margin-bottom: 30px;
+
+      @include media(">=tablet") {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  // #verified-result {
+  //   h1 {
+  //     font-size: 26px;
+  //     font-weight: 600;
+  //     margin-bottom: 30px;
+
+  //     @include media(">=tablet") {
+  //       font-size: 32px;
+  //       margin-bottom: 60px;
+  //     }
+
+  //     @include media(">=desktop") {
+  //       font-size: 38px;
+  //     }
+  //   }
+  // }
+
+  #preview-tips {
+    h1 {
+      font-size: 26px;
+      font-weight: 600;
+
+      @include media(">=tablet") {
+        font-size: 32px;
+      }
+
+
+      @include media(">=desktop") {
+        font-size: 38px;
+      }
+    }
+  }
+
+  @media screen and (max-width: $bp-tablet) {
+    .section-margin {
+      margin-top: 10px;
+    }
+
+    // .big-button {
+    //   width: 100%;
+    //   font-size: 15px;
+    // }
+
+    #preview-tips {
+      h2 {
+        font-size: 16px;
+        margin: 10px;
+      }
+    }
+  }
+}
+
+#signup-modal {
+  &.modal {
+    text-align: center;
+  }
+
+  .modal-header {
+    padding: 15px;
+
+    // background-color: $shredz-primary;
+    color: #484848;
+    text-align: center;
+
+    @include media(">=tablet") {
+      padding: 25px;
+    }
+
+
+    h3 {
+      padding-left: 30px;
+      font-size: 20px;
+      font-weight: bold;
+
+      @include media(">=tablet") {
+        font-size: 26px;
+      }
+
+
+      padding-right: 35px;
+    }
+  }
+
+  .modal-body {
+    img {
+      max-height: 180px;
+    }
+
+    ul {
+      li {
+        text-transform: uppercase;
+      }
+    }
+
+    .benefits {
+      margin: 0;
+
+      li {
+        margin-top: 10px;
+
+        .fa {
+          margin-right: 5px;
+          color: #66ac60;
+        }
+      }
+    }
+
+    .form-group {
+      margin-top: 20px;
+    }
+
+    #submit-button {
+      background: $shredz-primary;
+      width: 100%;
+      font-size: 26px;
+      margin-top: 20px;
+      margin-bottom: 30px;
+    }
+
+    .invitation {
+      text-transform: uppercase;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    &.modal:before {
+      display: inline-block;
+      vertical-align: middle;
+      content: " ";
+      height: 100%;
+    }
+  }
+
+  .modal-header .close {
+    font-size: 1.5em;
+    position: absolute;
+    color: #cfcfcf;
+    opacity: 0.9;
+    right: 10px;
+    top: 18px;
+
+    @include media(">=tablet") {
+      right: 20px;
+      top: 25px;
+      font-size: 2.2em;
+    }
+  }
+
+  .modal-dialog {
+    text-align: left;
+    vertical-align: middle;
+
+    @include media(">=tablet") {
+      display: inline-block;
+    }
+  }
+
+  @media (max-width: 767px) {
+    &.modal.fade.in {
+      top: 10%;
+    }
+  }
+}
+
+.form-group-select {
+  text-align: center;
+
+  .select {
+    position: relative;
+    margin: 0 auto 22px;
+
+    select.form-control {
+      border: 2px solid #cc0000;
+      color: #cc0000;
+      text-transform: uppercase;
+      padding: 9px 35px 9px 15px;
+      height: auto;
+    }
+
+    .fa {
+      position: absolute;
+      top: 13px;
+      right: 13px;
+      color: #cc0000;
+    }
+  }
+}
