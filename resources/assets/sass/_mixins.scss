@@ -442,3 +442,19 @@ $animation-speed: .3s !default;
 //   $vw-context: (767 * 0.1) * 1px;
 //   @return ($target / $vw-context) * 1vw;
 // }
+
+// list reset
+%listreset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// clearfix
+%clearfix {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}

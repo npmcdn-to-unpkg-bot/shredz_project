@@ -7,6 +7,9 @@ function initFocusClass() {
   jQuery('.wholesale-form .form-field').addFocusClass({
     focusClass: 'input-focused'
   });
+  jQuery('.profile-editor-form .form-field').addFocusClass({
+    focusClass: 'input-focused'
+  });
 }
 
 /*

@@ -379,8 +379,13 @@ Route::get('/fl/page1', [
 ]);
 
 Route::get('/fl/page2', [
-    'as' => 'page1.santosh',
+    'as' => 'page2.santosh',
     'uses' => 'v1\pages\PageController@page2'
+]);
+
+Route::get('/fl/dashboard', [
+    'as' => 'page3.dashboard',
+    'uses' => 'v1\pages\PageController@page3'
 ]);
 
 // THIS HAS TO BE THE LAST ROUTE IN THE FILE!

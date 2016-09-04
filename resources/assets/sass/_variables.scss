@@ -36,6 +36,7 @@ $bp-mobile: 480px;
 $bp-tablet: 768px;
 $bp-desktop: 992px;
 $bp-widescreen: 1200px;
+$bp-hd-widescreen: 1600px;
 
 // Initialize Breakpoints
 $breakpoints: (
@@ -43,7 +44,8 @@ $breakpoints: (
   'mobile': $bp-mobile,
   'tablet': $bp-tablet,
   'desktop': $bp-desktop,
-  'widescreen': $bp-widescreen
+  'widescreen': $bp-widescreen,
+  'largewidescreen': $bp-hd-widescreen
 );
 
 $bootstrap-sass-asset-helper: false !default;

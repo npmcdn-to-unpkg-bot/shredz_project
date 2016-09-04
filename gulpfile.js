@@ -33,6 +33,9 @@ elixir(function(mix) {
         };
     } else {
         console.log(os.hostname());
+        bsOptions = {
+            'proxy': 'http://shredz.dev'
+        };
     }
 
     mix

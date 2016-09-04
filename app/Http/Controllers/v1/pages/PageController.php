@@ -962,4 +962,9 @@ class PageController extends DataController
     {
         return view("pages.wholesalethank");
     }
+
+    public function page3()
+    {
+        return view("pages.dashboard");
+    }
 }
