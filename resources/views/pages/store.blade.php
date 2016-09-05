@@ -138,7 +138,7 @@
 @section('scripts')
     @include('includes.lib.animation')
     @include('includes.lib.templating')
-    <script src="https://npmcdn.com/isotope-layout@3.0/dist/isotope.pkgd.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3.0/dist/isotope.pkgd.min.js"></script>
     @if(!App::environment('production'))
 	<script type="text/javascript" src="{{asset('js/pages/store.js')}}"></script>
     @else
